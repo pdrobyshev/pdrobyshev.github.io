@@ -88,14 +88,13 @@ a {
     .list-group {
       width: 60%; } }
 
-.user {
-  padding: 0; }
-  @media (max-width: 575px) {
-    .user {
-      margin-bottom: 12px; } }
-  @media (max-width: 991px) {
-    .user__name {
-      margin-top: 12px; } }
+@media (max-width: 575px) {
+  .user {
+    margin-bottom: 12px; } }
+
+@media (max-width: 991px) {
+  .user__name {
+    margin-top: 12px; } }
 
 .rating {
   padding: 0; }
