@@ -79,7 +79,7 @@
             </li>
           </ul>
 
-          <button class="btn  btn-primary  ml-auto  button  button--create">Создать</button>
+          <button class="btn  btn-primary  ml-auto  button  button--create" data-toggle="modal" data-target="#addTeam">Создать</button>
         </div>
 
         <div class="row">
@@ -191,9 +191,44 @@
               </div>
             </div>
           </div>
-
         </div>
+      </div>
+    </div>
 
+    <div class="modal" id="addTeam" tabindex="-1">
+      <div class="modal-dialog  modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <p class="modal-title  h4">Новая команда</p>
+            <button type="button" class="close" data-dismiss="modal">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <form action="/">
+              <div class="form-group">
+                <input class="form-control  text-dark" type="text" id="formGroupExampleInput" placeholder="Название команды">
+              </div>
+
+              <div class="form-group">
+                <textarea class="form-control  form-textarea  text-dark" id="exampleFormControlTextarea1" rows="4" placeholder="Описание команды"></textarea>
+              </div>
+
+              <div class="input-group">
+                <input class="form-control  text-dark" type="text" placeholder="Имя участника">
+                <div class="input-group-append">
+                  <button class="btn btn-success" type="button">Добавить</button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+            <button type="button" class="btn btn-primary">Создать</button>
+          </div>
+        </div>
       </div>
     </div>
 
