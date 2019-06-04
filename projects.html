@@ -215,23 +215,27 @@
               </div>
 
               <div class="d-flex  justify-content-between">
-                <div class="input-group  mr-4">
-                  <input class="form-control  text-dark" type="text" placeholder="Исполнитель">
-                  <div class="input-group-append">
-                    <button class="btn btn-success" type="button">Добавить</button>
-                  </div>
-                </div>
-                <div class="input-group">
-                  <input class="form-control  text-dark" type="text" placeholder="Заказчик">
-                  <div class="input-group-append">
-                    <button class="btn btn-success" type="button">Добавить</button>
-                  </div>
-                </div>
-              </div>
+                <select class="custom-select  mr-4">
+                  <option value="" disabled selected>Команда</option>
+                  <option value="1">Команда #1</option>
+                  <option value="2">Команда #2</option>
+                  <option value="3">Команда #3</option>
+                  <option value="3">Команда #4</option>
+                  <option value="3">Команда #5</option>
+                </select>
+
+                <select class="custom-select">
+                  <option value="" disabled selected>Заказчик</option>
+                  <option value="1">Василий Пупкин</option>
+                  <option value="2">Василий Пупкин</option>
+                  <option value="3">Василий Пупкин</option>
+                  <option value="3">Василий Пупкин</option>
+                  <option value="3">Василий Пупкин</option>
+                </select>
             </form>
           </div>
 
-          <div class="modal-footer">
+          <div class="modal-footer  border-0">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
             <button type="button" class="btn btn-primary">Создать</button>
           </div>
