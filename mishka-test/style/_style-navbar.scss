@@ -1,0 +1,232 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+nav {
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  justify-content: left;
+  z-index: 1000;
+  margin: 0 auto;
+  padding: 0 45px;
+  li.item-1 {
+    padding-right: 35px;
+    border-right: 1px solid #e7e7e7;
+  }
+  li.item-2 {
+    padding: 0 0 0 35px;
+  }
+  li {
+    a {
+      cursor: pointer;
+      position: relative;
+      top: 30px;
+      color: #000;
+      font-family: "Open Sans", sans-serif;
+      font-weight: bold;
+      font-size: 17px;
+      display: block;
+      text-decoration: none;
+      -webkit-transition: border 350ms ease, color 350ms ease;
+      transition: border 350ms ease, color 350ms ease;
+      text-align: left;
+      svg {
+        transition: 0.3s;
+      }
+    }
+  }
+  li.item-3 {
+    border-right: 1px solid #e7e7e7;
+    border-left: 1px solid #e7e7e7;
+    padding: 0 30px;
+    a {
+      width: 18px;
+      overflow: hidden;
+      svg {
+        position: relative;
+        top: 5px;
+        fill: #d3d2d2;
+        width: 18px;
+      }
+    }
+  }
+  li.item-4 {
+    border: none;
+    a {
+      svg {
+        width: 20px;
+        fill: #d3d2d2;
+        margin: 0 55px 0 35px;
+        position: relative;
+        top: 3px;
+      }
+    }
+  }
+  li.logo {
+    a {
+      top: 0;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+  }
+}
+
+.nav-links {
+  li.item-4, li.item-3 {
+    a:hover {
+      svg {
+        fill: #63d1bb;
+        color: #63d1bb;
+      }
+    }
+  }
+}
+
+.nav-links li a.items:hover {
+  color: #666666;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    nav {
+      .container {
+        .row {
+          .col-md-12 {
+            padding: 0;
+          }
+        }
+      }
+
+      ul.nav-links {
+        li.logo {
+          display: none;
+        }
+        li.item-1, li.item-2, li.item-3, li.item-4 {
+          display: block;
+          position: relative;
+          left: 0;
+          margin: 0;
+          border: none;
+          top: 0;
+          padding: 27px 0;
+          border-bottom: 1px solid #e7e7e7;
+          a {
+            cursor: pointer;
+            top: 0;
+            text-align: center;
+            font-size: 17px;
+          }
+        }
+        li.item-1 {
+          border-top: 1px solid #e7e7e7;
+        }
+        li.item-3 {
+          height: auto;
+          a {
+            width: 100%;
+          }
+          a::after {
+            content: "Поиск по сайту";
+
+          }
+        }
+        li.item-4, li.item-3 {
+          a {
+            svg {
+              margin: 0 26px 0 0;
+            }
+          }
+        }
+      }
+
+    }
+  }
+  .nav-links {
+    position: fixed;
+    width: 100%;
+    flex-direction: column;
+    clip-path: circle(0 at 100% -15%);
+    -webkit-clip-path: circle(0 at 100% -15%);
+    transition: all 0s;
+    pointer-events: none;
+    height: 80px;
+  }
+  .nav-links::before {
+    position: absolute;
+    top: 20px;
+    left: 42%;
+    content: "";
+    background: url("../images/svg/logo-mobile.svg") no-repeat;
+    width: 85px;
+    height: 35px;
+  }
+  nav::before {
+    position: absolute;
+    top: 20px;
+    left: 42%;
+    content: "";
+    background: url("../images/svg/logo-mobile.svg") no-repeat;
+    width: 85px;
+    height: 35px;
+  }
+
+  .nav-links.open {
+    background-color: #fff;
+    clip-path: circle(1200px at 90% -10%);
+    -webkit-clip-path: circle(1200px at 90% -10%);
+    pointer-events: none;
+    height: 400px;
+    padding: 80px 0 30px 0;
+  }
+
+  .line {
+    width: 30px;
+    height: 3px;
+    background: #333;
+    margin: 5px;
+  }
+
+  .lines {
+    position: absolute;
+    cursor: pointer;
+    top: 15px;
+    right: 15px;
+    z-index: 99999;
+    transform: translate(-5%, -50%);
+    margin-top: 25px;
+  }
+  .lines {
+    .line.open-line:nth-child(1) {
+      transform: rotate(45deg);
+    }
+    .line.open-line:nth-child(2) {
+      display: none;
+    }
+    .line.open-line:nth-child(3) {
+      transform: rotate(-45deg);
+      top: -8px;
+      position: relative;
+    }
+  }
+
+  .landing {
+    flex-direction: column;
+  }
+  .nav-links li a {
+    font-size: 25px;
+  }
+  li.fade {
+    opacity: 1;
+  }
+}
