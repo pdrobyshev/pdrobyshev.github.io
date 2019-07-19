@@ -1,0 +1,30 @@
+/* Bold */
+@font-face {
+  font-family: "Open Sans";
+  src: url("../../fonts/OpenSans-Bold.woff2?v=1.101") format("woff2"), url("../../fonts/OpenSans-Bold.woff?v=1.101") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+/*  Bold Italic */
+@font-face {
+  font-family: "Open Sans";
+  src: url("../../fonts/OpenSans-BoldItalic.woff2?v=1.101") format("woff2"), url("../../fonts/OpenSans-BoldItalic.woff?v=1.101") format("woff");
+  font-weight: bold;
+  font-style: italic; }
+/* Italic */
+@font-face {
+  font-family: "Open Sans";
+  src: url("../../fonts/OpenSans-Italic.woff2?v=1.101") format("woff2"), url("../../fonts/OpenSans-Italic.woff?v=1.101") format("woff");
+  font-weight: normal;
+  font-style: italic; }
+/* BEGIN Light */
+@font-face {
+  font-family: "Open Sans";
+  src: url("../../fonts/OpenSans-Light.woff2?v=1.101") format("woff2"), url("../../fonts/OpenSans-Light.woff?v=1.101") format("woff");
+  font-weight: 300;
+  font-style: normal; }
+/* Regular */
+@font-face {
+  font-family: "Open Sans";
+  src: url("../../fonts/OpenSans-Regular.woff2?v=1.101") format("woff2"), url("../../fonts/OpenSans-Regular.woff?v=1.101") format("woff");
+  font-weight: normal;
+  font-style: normal; }

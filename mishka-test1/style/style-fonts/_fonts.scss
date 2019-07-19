@@ -1,0 +1,45 @@
+@mixin fontdef($OpenSansPath, $OpenSansVersion, $FontType: "Regular") {
+  src: url("#{$OpenSansPath}/OpenSans-#{$FontType}.woff2?v=#{$OpenSansVersion}") format("woff2"),
+  url("#{$OpenSansPath}/OpenSans-#{$FontType}.woff?v=#{$OpenSansVersion}") format("woff");
+}
+
+/* Bold */
+@font-face {
+  font-family: "Open Sans";
+  @include fontdef($OpenSansPath, $OpenSansVersion, "Bold");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/*  Bold Italic */
+@font-face {
+  font-family: "Open Sans";
+  @include fontdef($OpenSansPath, $OpenSansVersion, "BoldItalic");
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Italic */
+@font-face {
+  font-family: "Open Sans";
+  @include fontdef($OpenSansPath, $OpenSansVersion, "Italic");
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* BEGIN Light */
+@font-face {
+  font-family: "Open Sans";
+  @include fontdef($OpenSansPath, $OpenSansVersion, "Light");
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Regular */
+@font-face {
+  font-family: "Open Sans";
+  @include fontdef($OpenSansPath, $OpenSansVersion, "Regular");
+  font-weight: normal;
+  font-style: normal;
+}
+
