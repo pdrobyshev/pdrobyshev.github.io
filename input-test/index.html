@@ -20,13 +20,14 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 <script>
     $('.field__input').on('keyup keydown input', function (e) {
-        if (e.keyCode === 188 || e.keyCode === 190) {
-            return false;
-        }
+        // if (e.keyCode === 188 || e.keyCode === 190) {
+        //     return false;
+        // }
         this.value = this.value.replace(/[^\d]/g, '');
         // this.value = this.value.replace(/,/g, '');
         // this.value = this.value.replace(/./g, '');
     });
+    $('.field__input').click().focus();
 </script>
 </body>
 </html>
