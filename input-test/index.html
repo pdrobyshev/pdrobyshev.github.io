@@ -15,20 +15,13 @@
     </style>
 </head>
 <body>
-<input class="field__input" type="text" inputmode="numeric" pattern="\d*" autofocus>
+<input class="field__input" type="text" inputmode="numeric" autofocus>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 <script>
-    $('.field__input').on('keyup keydown input', function (e) {
-        // if (e.keyCode === 188 || e.keyCode === 190) {
-        //     return false;
-        // }
+    $('.field__input').on('keyup keydown input', function () {
         this.value = this.value.replace(/[^\d]/g, '');
-        // this.value = this.value.replace(/,/g, '');
-        // this.value = this.value.replace(/./g, '');
     });
-    $('.field__input').focus();
-    $('.field__input').click();
 </script>
 </body>
 </html>
