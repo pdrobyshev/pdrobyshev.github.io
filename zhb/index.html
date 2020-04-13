@@ -55,7 +55,7 @@
 		</header>
 
 		<main class="page-main">
-			<form class="form  page-main__form" action="/">
+			<form class="form  form--deliver  page-main__form" action="/">
 				<h2 class="form__title">Заработай на перелёте</h2>
 
 				<div class="field-text">
@@ -67,11 +67,13 @@
 				<div class="field-text">
 					<input class="field-text__input" type="text" name="name" placeholder="Куда прилетаете" required>
 				</div>
-				<div class="field-text">
-					<input class="field-text__input" type="text" name="name" placeholder="Дата перелёта" required>
-				</div>
-				<div class="field-text">
-					<input class="field-text__input" type="text" name="name" placeholder="Время перелета" required>
+				<div class="field-text-wrapper">
+					<div class="field-text  field-text-wrapper__field">
+						<input class="field-text__input" type="text" name="name" placeholder="Дата перелёта" required>
+					</div>
+					<div class="field-text  field-text-wrapper__field">
+						<input class="field-text__input" type="text" name="name" placeholder="Время перелета" required>
+					</div>
 				</div>
 				<div class="field-text">
 					<input class="field-text__input" type="tel" inputmode="numeric" name="name" placeholder="Номер телефона" required>
@@ -84,7 +86,7 @@
 				</p>
 			</form>
 
-			<form class="form" action="/">
+			<form class="form  form--send" action="/">
 				<h2 class="form__title">Отправляй посылку самолётом</h2>
 
 				<div class="field-text">
