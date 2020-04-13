@@ -10,132 +10,67 @@
 		<link rel="stylesheet" href="css/style.min.css">
 	</head>
 	<body>
-		<header class="page-header">
-			<div class="logo  page-header__logo">
-				<img class="logo__img" src="img/logotype.svg" alt="логотип ZHIBEK" width="88" height="40">
-			</div>
+		<div class="container">
+			<header class="page-header">
+				<div class="logo  page-header__logo">
+					<img class="logo__img" src="img/logotype.svg" alt="логотип ZHIBEK" width="88" height="40">
+				</div>
 
-			<ul class="slider" data-flickity='{ "cellAlign": "center", "contain": true, "watchCSS": true, "pageDots": false }'>
-				<li class="slider__item">
-					<picture>
-						<source type="image/webp" media="(min-width: 768px)" srcset="img/desktop/deliver-desktop@1x.webp 1x,
+				<ul class="slider" data-flickity='{ "cellAlign": "center", "contain": true, "watchCSS": true, "pageDots": false }'>
+					<li class="slider__item">
+						<picture>
+							<source type="image/webp" media="(min-width: 768px)" srcset="img/desktop/deliver-desktop@1x.webp 1x,
 																																				img/desktop/deliver-desktop@2x.webp 2x">
-						<source type="image/webp" srcset="img/mobile/deliver-mobile@1x.webp 1x,
+							<source type="image/webp" srcset="img/mobile/deliver-mobile@1x.webp 1x,
 																							img/mobile/deliver-mobile@2x.webp 2x">
 
-						<source media="(min-width: 768px)" srcset="img/desktop/deliver-desktop@1x.png 1x,
+							<source media="(min-width: 768px)" srcset="img/desktop/deliver-desktop@1x.png 1x,
 																											img/desktop/deliver-desktop@2x.png 2x">
-						<img class="slider__img" src="img/mobile/deliver-mobile@1x.png"
-								 									srcset="img/mobile/deliver-mobile@2x.png 2x" alt="Заработай на перелёте" width="224" height="224">
-					</picture>
+							<img class="slider__img" src="img/mobile/deliver-mobile@1x.png"
+									 srcset="img/mobile/deliver-mobile@2x.png 2x" alt="Заработай на перелёте" width="224" height="224">
+						</picture>
 
-					<h2 class="slider__title  slider__title--short">Заработай на перелёте</h2>
-					<p class="slider__text  slider__text--short">Сообщи нам когда полетишь и что готов перевезти</p>
-					<button class="slider__button  button">Я полечу</button>
-				</li>
+						<h2 class="slider__title  slider__title--short">Заработай на перелёте</h2>
+						<p class="slider__text  slider__text--short">Сообщи нам когда полетишь и что готов перевезти</p>
+						<a class="slider__button  button" href="delivery.html">Я полечу</a>
+					</li>
 
-				<li class="slider__item">
-					<picture>
-						<source type="image/webp" media="(min-width: 768px)" srcset="img/desktop/send-desktop@1x.webp 1x,
+					<li class="slider__item">
+						<picture>
+							<source type="image/webp" media="(min-width: 768px)" srcset="img/desktop/send-desktop@1x.webp 1x,
 																																				img/desktop/send-desktop@2x.webp 2x">
-						<source type="image/webp" srcset="img/mobile/send-mobile@1x.webp 1x,
+							<source type="image/webp" srcset="img/mobile/send-mobile@1x.webp 1x,
 																							img/mobile/send-mobile@2x.webp 2x">
 
-						<source media="(min-width: 768px)" srcset="img/desktop/send-desktop@1x.png 1x,
+							<source media="(min-width: 768px)" srcset="img/desktop/send-desktop@1x.png 1x,
 																											img/desktop/send-desktop@2x.png 2x">
-						<img class="slider__img" src="img/mobile/send-mobile@1x.png"
-								 srcset="img/mobile/send-mobile@2x.png 2x" alt="Отправляй посылку самолётом" width="224" height="224">
-					</picture>
+							<img class="slider__img" src="img/mobile/send-mobile@1x.png"
+									 srcset="img/mobile/send-mobile@2x.png 2x" alt="Отправляй посылку самолётом" width="224" height="224">
+						</picture>
 
-					<h2 class="slider__title">Отправляй посылку самолётом</h2>
-					<p class="slider__text">Опиши что и куда нужно отправить</p>
-					<button class="slider__button  button  button--orange">Нужно отправить</button>
-				</li>
-			</ul>
-		</header>
-
-		<main class="page-main">
-			<form class="form  form--deliver  page-main__form" action="/">
-				<h2 class="form__title">Заработай на перелёте</h2>
-
-				<div class="field-text">
-					<input class="field-text__input" type="text" name="name" placeholder="Ваше имя" required>
-				</div>
-				<div class="field-text">
-					<input class="field-text__input" type="text" name="name" placeholder="Откуда вылет" required>
-				</div>
-				<div class="field-text">
-					<input class="field-text__input" type="text" name="name" placeholder="Куда прилетаете" required>
-				</div>
-				<div class="field-text-wrapper">
-					<div class="field-text  field-text-wrapper__field">
-						<input class="field-text__input" type="text" name="name" placeholder="Дата перелёта" required>
-					</div>
-					<div class="field-text  field-text-wrapper__field">
-						<input class="field-text__input" type="text" name="name" placeholder="Время перелета" required>
-					</div>
-				</div>
-				<div class="field-text">
-					<input class="field-text__input" type="tel" inputmode="numeric" name="name" placeholder="Номер телефона" required>
-				</div>
-
-				<button class="form__button  button">Продолжить</button>
-
-				<p class="form__offer">
-					Нажимая кнопку «Продложить», вы соглашаетесь с <a class="form__link" href="#">офертой</a>
-				</p>
-			</form>
-
-			<form class="form  form--send" action="/">
-				<h2 class="form__title">Отправляй посылку самолётом</h2>
-
-				<div class="field-text">
-					<input class="field-text__input" type="text" name="name" placeholder="Ваше имя" required>
-				</div>
-				<div class="field-text">
-					<input class="field-text__input" type="text" name="name" placeholder="Откуда" required>
-				</div>
-				<div class="field-text">
-					<input class="field-text__input" type="text" name="name" placeholder="Куда" required>
-				</div>
-				<div class="field-text">
-					<input class="field-text__input  field-text__input--hint" type="text" name="name" placeholder="Готов заплатить" required>
-					<span class="field-text__hint">В среднем это от 1 000 до 2 000 тенге</span>
-				</div>
-				<div class="field-text">
-					<input class="field-text__input" type="tel" inputmode="numeric" name="name" placeholder="Номер телефона" required>
-				</div>
-
-				<button class="form__button  button  button--orange">Продолжить</button>
-
-				<p class="form__offer">
-					Нажимая кнопку «Продложить», вы соглашаетесь с <a class="form__link" href="#">офертой</a>
-				</p>
-			</form>
-		</main>
-
-		<footer class="page-footer">
-			<div class="contacts  page-footer__contacts">
-				<h2 class="contacts__title">Контакты</h2>
-				<span class="contacts__name">Имя</span>
-				<a class="contacts__link" href="#">e-mail</a>
-				<a class="contacts__link" href="#">+7 777 157 54 31</a>
-			</div>
-
-			<nav class="footer-nav">
-				<ul class="nav-list">
-					<li class="nav-list__item">
-						<a class="nav-list__link" href="#">Оферта</a>
-					</li>
-					<li class="nav-list__item">
-						<a class="nav-list__link" href="#">Контакты</a>
-					</li>
-					<li class="nav-list__item">
-						<a class="nav-list__link" href="#">FAQ</a>
+						<h2 class="slider__title">Отправляй посылку самолётом</h2>
+						<p class="slider__text">Опиши что и куда нужно отправить</p>
+						<a class="slider__button  button  button--orange" href="send.html">Нужно отправить</a>
 					</li>
 				</ul>
-			</nav>
-		</footer>
+			</header>
+
+			<footer class="page-footer">
+				<nav class="footer-nav">
+					<ul class="nav-list">
+						<li class="nav-list__item">
+							<a class="nav-list__link" href="#">Оферта</a>
+						</li>
+						<li class="nav-list__item">
+							<a class="nav-list__link" href="contacts.html">Контакты</a>
+						</li>
+						<li class="nav-list__item">
+							<a class="nav-list__link" href="#">FAQ</a>
+						</li>
+					</ul>
+				</nav>
+			</footer>
+		</div>
 
 		<script src="flickity/flickity.pkgd.min.js"></script>
 	</body>
