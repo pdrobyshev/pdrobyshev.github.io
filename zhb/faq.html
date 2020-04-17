@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Сервис доставки ZHIBER</title>
+		<link rel="preload" href="/fonts/geometria800.woff2" as="font">
+		<link rel="preload" href="/fonts/geometria500.woff2" as="font">
+		<link rel="stylesheet" href="flickity/flickity.min.css">
+		<link rel="stylesheet" href="css/style.min.css">
+	</head>
+	<body>
+		<div class="modal-overlay  modal-hide"></div>
+
+		<div class="container">
+			<main class="page-main  container__page-main">
+				<div class="logo  page-main__logo">
+					<img class="logo__img" src="img/logotype.svg" alt="логотип ZHIBEK" width="88" height="40">
+				</div>
+
+				<div class="faq  block  page-main__faq">
+					<h2 class="faq__title">FAQ</h2>
+
+					<ul class="questions">
+						<li class="questions__item">
+							<span class="questions__question">Как это работает?</span>
+							<p class="questions__answer">
+								Мы очень часто слышим слова «оферта», «публичная оферта», «не является публичной офертой», но не всегда понимаем их смысл. На самом деле, эти понятия не так уж и далеки от нас. Представьте себе ситуацию: парень предлагает девушке "руку и сердце" и делает.
+							</p>
+						</li>
+						<li class="questions__item">
+							<span class="questions__question">Второй вопрос</span>
+							<p class="questions__answer">
+								Мы очень часто слышим слова «оферта», «публичная оферта», «не является публичной офертой», но не всегда понимаем их смысл. На самом деле, эти понятия не так уж и далеки от нас.
+							</p>
+						</li>
+						<li class="questions__item">
+							<span class="questions__question">Третий вопрос</span>
+							<p class="questions__answer">
+								Мы очень часто слышим слова «оферта», «публичная оферта», «не является публичной офертой», но не всегда понимаем их смысл.
+							</p>
+						</li>
+					</ul>
+
+					<button class="faq__button" id="question-modal-button">Задать свой вопрос</button>
+				</div>
+			</main>
+
+			<footer class="page-footer  container__page-footer">
+				<nav class="footer-nav">
+					<ul class="nav-list">
+						<li class="nav-list__item">
+							<a class="nav-list__link" href="offer.html">Оферта</a>
+						</li>
+						<li class="nav-list__item">
+							<a class="nav-list__link" href="contacts.html">Контакты</a>
+						</li>
+						<li class="nav-list__item">
+							<a class="nav-list__link">FAQ</a>
+						</li>
+					</ul>
+				</nav>
+			</footer>
+		</div>
+
+		<section class="modal  modal--question  modal-hide">
+			<form class="modal-form  block" action="/">
+				<div class="modal-form-inner-wrapper">
+					<div class="modal-form__header">
+						<h2 class="modal-form__title">Свой вопрос</h2>
+
+						<button class="modal-form__close" id="question-modal-close-button">
+							<img class="modal-form__close-icon" src="img/icon-close.svg" alt="иконка закрытия модалки" width="30" height="30">
+						</button>
+					</div>
+
+					<div class="field-text">
+						<input class="field-text__input" type="text" placeholder="Ваше имя" autofocus>
+					</div>
+					<div class="field-text">
+						<input class="field-text__input" type="email" inputmode="email" placeholder="E-mail">
+					</div>
+					<div class="field-text">
+						<textarea class="field-text__input  field-text__textarea" name="question" placeholder="Ваш вопрос"></textarea>
+					</div>
+
+					<button class="modal-form__button  button  button--orange">Оформить заказ</button>
+				</div>
+			</form>
+		</section>
+
+		<script src="flickity/flickity.pkgd.min.js"></script>
+		<script src="js/question-modal.js"></script>
+	</body>
+</html>
