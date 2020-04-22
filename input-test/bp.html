@@ -53,6 +53,20 @@
         const creditCardNumberOne = document.getElementById('creditCardNumberOne');
         creditCardNumberOne.focus();
         creditCardNumberOne.click();
+
+        $('.field__input').on('click', function () {
+            if ($(this).val() === '') {
+                if ($('#creditCardNumberOne').val() === '') {
+                    $('#creditCardNumberOne').focus();
+                }
+                else if ($('#creditCardNumberTwo').val() === '') {
+                    $('#creditCardNumberTwo').focus();
+                }
+                else if ($('#creditCardNumberThree').val() === '') {
+                    $('#creditCardNumberThree').focus();
+                }
+            }
+        });
     });
 </script>
 </body>
