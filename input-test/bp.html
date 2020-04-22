@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+<div class="container" id="card-block">
+    <form id="withdrawal-form" name="frmCardInfo" method="post" autocomplete="off" class="form">
+        <div class="card-frame">
+            <span class="card-frame__title"><i18n:text>Номер карты</i18n:text></span>
+
+            <div class="field">
+                <input class="field__input" type="number" name="panOne" id="creditCardNumberOne" maxlength="4" autocomplete="off" pattern="[0-9]{4}" data-card-type="cardNumber" title="Номер карты" i18n:attr="title" autofocus/>
+                <input class="field__input" type="number" name="panTwo" id="creditCardNumberTwo" maxlength="4" autocomplete="off" pattern="[0-9]{4}" data-card-type="cardNumber" title="Номер карты" i18n:attr="title"/>
+                <input class="field__input" type="number" name="panThree" id="creditCardNumberThree" maxlength="4" autocomplete="off" pattern="[0-9]{4}" data-card-type="cardNumber" title="Номер карты" i18n:attr="title"/>
+                <input class="field__input" type="number" name="panFour" id="creditCardNumberFour" maxlength="6" autocomplete="off" pattern="[0-9]{4}" data-card-type="cardNumber" title="Номер карты" i18n:attr="title"/>
+            </div>
+        </div>
+
+        <div class="btn-block">
+            <input class="btn btn--card" type="submit" value="Пополнить" i18n:attr="value"/>
+        </div>
+
+        <input name="pan" id="creditCardNumberHidden" type="hidden" maxlength="23" autocomplete="off" title="Номер карты" i18n:attr="title"/>
+        <input name="cardHolder" id="card-holder-name" type="hidden" autocomplete="off" maxlength="32" title="Имя держателя" value="beeline user" i18n:attr="title"/>
+        <input name="checkData" value="" id="checkData" type="hidden"/>
+        <input name="tranGUID" value="604406d7-4785-46aa-9235-902643b83765" id="tranGUID" type="hidden"/>
+        <input name="javascriptSupport" value="true" id="javascriptSupport" type="hidden"/>
+        <input name="firstRequest" value="false" id="firstRequest" type="hidden"/>
+        <input name="flagP2P" value="1" id="flagP2P" type="hidden"/>
+    </form>
+</div>
+
+<div class="preloader">
+    <div class="preloader-block">
+        <div class="preloader-dots">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div style="clear: both"></div>
+        <div class="preloader-text"><i18n:text>идет загрузка</i18n:text></div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const creditCardNumberOne = document.getElementById('creditCardNumberOne');
+        creditCardNumberOne.focus();
+        creditCardNumberOne.click();
+    });
+</script>
+</body>
+</html>
