@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button id="apple-pay-button" style="display: none;">APPLE PAY</button>
+</body>
+
+<script>
+    const paymentRequest = {
+        total: {
+            label: 'пополнение счёта',
+            amount: 50  // -?[0-9]+(\.[0-9][0-9])?
+        },
+        countryCode: 'RU',
+        currencyCode: 'RUB',
+        merchantCapabilities: ['supports3DS'],
+        supportedNetworks: ['masterCard', 'visa']
+    };
+
+    if (window.ApplePaySession) {
+        var merchantIdentifier = 'example.com.store';
+
+        var promise = ApplePaySession.canMakePaymentsWithActiveCard(merchantIdentifier);
+
+        promise.then(function (canMakePayments) {
+            if (canMakePayments) {
+                const payButton = document.getElementById('apple-pay-button');
+                payButton.style.display = 'block';
+
+                payButton.addEventListener('click', function () {
+                    const applePaySession = new window.ApplePaySession(1, paymentRequest);
+
+                    applePaySession.onvalidatemerchant = (event) => {
+                        // отправляем запрос на получение сессии
+                        // представим что функция request возвращает promise
+                        p = request('POST', '/cashin/apple-pay/get-session', data={url: event.validationURL});
+                        p.done((payload) => {
+                            // завершаем валидацию мерчанта
+                            applePaySession.completeMerchantValidation(
+                                payload.merchantSession
+                            );
+                        });
+                        p.fail(() => {
+                            applePaySession.abort();
+                            // показ сообщения об ошибке и т.п.
+                        });
+                    };
+                });
+            }
+        });
+    } else {
+        document.write("YOU CAN'T USE APPLE PAY");
+    }
+</script>
+</html>
