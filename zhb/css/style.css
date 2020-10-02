@@ -2763,10 +2763,6 @@ a {
 .page-wrapper__page-footer {
   margin-top: auto; }
 
-.body-100vh {
-  min-height: 100vh;
-  min-height: -webkit-fill-available; }
-
 .body-overflow {
   height: 100vh;
   overflow: hidden; }
