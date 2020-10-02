@@ -680,6 +680,7 @@ a {
   display: -ms-flexbox;
   display: flex;
   height: 100vh;
+  min-height: -webkit-fill-available;
   background-color: #F3F5DD;
   background-image: url("../images/index/video-placeholder-mobile.jpg");
   background-position: center;
