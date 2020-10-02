@@ -34,9 +34,9 @@ $(document).ready(function () {
 	checkHeight();
 });
 
-// $(window).on('resize', function () {
-// 	checkHeight();
-// });
+$(window).on('resize', function () {
+	checkHeight();
+});
 
 function checkSlider() {
 	if ($(window).outerWidth() >= 1360) {

@@ -11,6 +11,6 @@ $(document).ready(function () {
 	checkHeight();
 });
 
-// $(window).on('resize', function () {
-// 	checkHeight();
-// });
+$(window).on('resize', function () {
+	checkHeight();
+});
