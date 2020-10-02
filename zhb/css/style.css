@@ -34,7 +34,6 @@
   src: url("../fonts/montserrat400.woff2") format("woff2"), url("../fonts/montserrat400.woff") format("woff"); }
 
 html {
-  height: 100%;
   height: -webkit-fill-available;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -2762,6 +2761,10 @@ a {
 
 .page-wrapper__page-footer {
   margin-top: auto; }
+
+.body-100vh {
+  min-height: 100vh;
+  min-height: -webkit-fill-available; }
 
 .body-overflow {
   height: 100vh;
