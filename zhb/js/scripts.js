@@ -22,12 +22,11 @@ $('.call__modal-btn').on('click', function () {
 });
 
 function checkHeight() {
-	alert($(window).height());
-// 	if ($(window).height() < 780) {
-// 		$('.first-frame').addClass('first-frame--auto-height');
-// 	} else {
-// 		$('.first-frame').removeClass('first-frame--auto-height');
-// 	}
+	if ($(window).height() < 715) {
+		$('.first-frame').addClass('first-frame--auto-height');
+	} else {
+		$('.first-frame').removeClass('first-frame--auto-height');
+	}
 }
 
 $(document).ready(function () {
@@ -125,33 +124,11 @@ $(document).on('keydown', function (e) {
 	}
 });
 
-"use strict";
+import smoothscroll from 'smoothscroll-polyfill';
 
-$(document).ready(function(){
-	// Add smooth scrolling to all links
-	$("a").on('click', function(event) {
-
-		// Make sure this.hash has a value before overriding default behavior
-		if (this.hash !== "") {
-			// Prevent default anchor click behavior
-			event.preventDefault();
-
-			// Store hash
-			var hash = this.hash;
-
-			// Using jQuery's animate() method to add smooth page scroll
-			// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-			$('html, body').animate({
-				scrollTop: $(hash).offset().top
-			}, 800, function(){
-
-				// Add hash (#) to URL when done scrolling (default click behavior)
-				window.location.hash = hash;
-			});
-		} // End if
-	});
+$(document).ready(function () {
+	smoothscroll.polyfill();
 });
-
 
 "use strict";
 

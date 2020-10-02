@@ -407,7 +407,7 @@ a {
     margin-right: 16px; }
   .info-links__link {
     display: block;
-    padding: 4px;
+    padding: 4px 0;
     font-size: 12px;
     line-height: 2.5em;
     color: #252554;
@@ -691,7 +691,7 @@ a {
       overflow: hidden;
       background-image: none; } }
   .first-frame__page-header {
-    margin-bottom: 72px; }
+    margin-bottom: 32px; }
     @media (min-width: 1160px) {
       .first-frame__page-header {
         margin-bottom: 220px; } }
