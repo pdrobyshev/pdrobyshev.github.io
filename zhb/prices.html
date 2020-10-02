@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Сервис Zhiber</title>
+	<link rel="preload" href="/fonts/montserrat700.woff2" as="font">
+	<link rel="preload" href="/fonts/montserrat500.woff2" as="font">
+	<link rel="stylesheet" href="flickity/flickity.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="body-100vh">
+	<div class="page-wrapper">
+		<section class="faq-header">
+			<div class="container  container--first-frame">
+				<header class="page-header">
+					<button class="page-header__button" id="menu-open-btn">
+						<img class="page-header__button-icon" src="images/icons/burger-menu.svg" alt="menu" width="30" height="30">
+					</button>
+
+					<nav class="main-nav">
+						<div class="main-nav__inner-wrapper">
+							<button class="main-nav__button" id="menu-close-btn">
+								<img src="images/icons/close.svg" alt="close menu" width="30" height="30">
+							</button>
+
+							<ul class="menu-list">
+								<li class="menu-list__item">
+									<a class="menu-list__link" href="#">О сервисе</a>
+								</li>
+								<li class="menu-list__item">
+									<a class="menu-list__link" href="#">Цены</a>
+								</li>
+								<li class="menu-list__item">
+									<a class="menu-list__link" href="#">Вопросы и ответы</a>
+								</li>
+								<li class="menu-list__item">
+									<a class="menu-list__link" href="#">Контакты</a>
+								</li>
+							</ul>
+
+							<a class="main-nav__link" href="#">Вход</a>
+						</div>
+					</nav>
+
+					<a class="logo" href="#">
+						<picture class="logo__picture">
+							<source media="(min-width: 1160px)" srcset="images/logo-desktop@1x.png 1x,
+																												images/logo-desktop@2x.png 2x">
+							<img class="logo__img" src="images/logo-mobile@1x.png"
+									 srcset="images/logo-mobile@2x.png 2x" alt="Zhiber" width="85" height="50">
+						</picture>
+					</a>
+
+					<ul class="language">
+						<li class="language__item  language__item--active">
+							<a class="language__link" href="#">RU</a>
+						</li>
+						<li class="language__item">
+							<a class="language__link" href="#">KZ</a>
+						</li>
+						<li class="language__item">
+							<a class="language__link" href="#">EN</a>
+						</li>
+					</ul>
+
+					<div class="call">
+						<img class="call__img" src="images/icons/call.svg" alt="call" width="60" height="60">
+
+						<div class="call__right">
+							<a class="call__number" href="tel:+77064074449">
+								+7 706
+								<span class="call__number-large">407-44-49</span>
+							</a>
+
+							<button class="call__text  call__modal-btn">Перезвоните мне</button>
+						</div>
+					</div>
+				</header>
+			</div>
+		</section>
+
+		<main class="page-main" id="page-main">
+			<article class="prices">
+				<h1 class="prices__title">Цены</h1>
+				<p class="prices__intro">
+					Zhiber не устанавливает цены, но может подсказать рыночную стоимость отправки.<br>
+					Однако, конечная стоимость обговаривается между отправителем и попутчиком, в зависимости от условий отправки (место передачи, получения, размеров посылки и так далее).
+				</p>
+
+				<ul class="price-list  prices__price-list">
+					<li class="price-list__item  price-list__item--header">
+						<span class="price-list__text  price-list__text--header">Вид отправления</span>
+						<span class="price-list__text  price-list__text--header">Стоимость (тенге)</span>
+					</li>
+					<li class="price-list__item">
+						<span class="price-list__text">Документ</span>
+						<span class="price-list__text">1500–2500</span>
+					</li>
+					<li class="price-list__item">
+						<span class="price-list__text">Посылка размера S (до 1 кг)</span>
+						<span class="price-list__text">2500–3000</span>
+					</li>
+					<li class="price-list__item">
+						<span class="price-list__text">Посылка размера M (от 1 кг до 3 кг)</span>
+						<span class="price-list__text">3000–4500</span>
+					</li>
+					<li class="price-list__item">
+						<span class="price-list__text">Посылка размера L (от 3 кг до 5 кг)</span>
+						<span class="price-list__text">4500–6000</span>
+					</li>
+				</ul>
+
+				<p class="prices__info">
+					Пожалуйста, ознакомьтесь с <a class="prices__link" href="#">условиями отправки</a>.
+				</p>
+			</article>
+		</main>
+
+		<footer class="page-footer  body-100vh__page-footer">
+			<div class="container  container--footer">
+				<div class="footer-links">
+					<a class="footer-links__logo" href="#">
+						<img class="slider__img" src="images/logo-footer@1x.png"
+								 srcset="images/logo-footer@2x.png 2x" alt="zhiber" width="130" height="16">
+					</a>
+
+					<a class="footer-links__offer" href="#">Публичная оферта</a>
+				</div>
+
+				<span class="page-footer__copyright">© Zhiber, 2020</span>
+			</div>
+		</footer>
+	</div>
+
+	<section class="modal  modal--call">
+		<form class="modal-form  modal-form--call" action="/">
+			<button class="modal-form__close">
+				<img class="modal-form__close-icon" src="images/icons/close.svg" alt="close" width="30" height="30">
+			</button>
+
+			<h2 class="modal-form__title">Закажите обратный звонок</h2>
+
+			<p class="modal-form__text">Укажите свой номер телефона и мы перезвоним вам в ближайшее время.</p>
+
+			<div class="modal-form__flex-wrapper">
+				<div class="field-text  field-text--bordered  field-text--phone">
+					<input class="field-text__input  field-text__input--bordered" type="text" inputmode="numeric" name="phone" placeholder="Ваш номер телефона" required>
+				</div>
+
+				<button class="modal-form__button  button">Перезвоните мне</button>
+			</div>
+		</form>
+	</section>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="js/scripts.min.js"></script>
+</body>
+</html>

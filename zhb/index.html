@@ -1,79 +1,654 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Сервис доставки ZHIBER</title>
-		<link rel="preload" href="/fonts/geometria800.woff2" as="font">
-		<link rel="preload" href="/fonts/geometria500.woff2" as="font">
-		<link rel="stylesheet" href="flickity/flickity.min.css">
-		<link rel="stylesheet" href="css/style.min.css">
-	</head>
-	<body>
-		<div class="container">
-			<main class="page-main  container__page-main">
-				<div class="logo  page-main__logo">
-					<a class="logo__link">
-						<img class="logo__img" src="img/logotype.svg" alt="логотип ZHIBEK" width="88" height="40">
-					</a>
-				</div>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Сервис Zhiber</title>
+	<link rel="preload" href="/fonts/montserrat700.woff2" as="font">
+	<link rel="preload" href="/fonts/montserrat500.woff2" as="font">
+	<link rel="stylesheet" href="flickity/flickity.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+	<section class="first-frame">
+		<video class="frame-video" autoplay="autoplay" loop muted poster="images/index/video-placeholder-desktop.jpg">
+			<source src="images/index/videoslider.mp4" type="video/mp4">
+		</video>
 
-				<ul class="slider  page-main__slider" data-flickity='{ "cellAlign": "center", "contain": true, "watchCSS": true, "pageDots": false }'>
-					<li class="slider__item">
-						<picture>
-							<source type="image/webp" media="(min-width: 769px)" srcset="img/desktop/deliver-desktop@1x.webp 1x,
-																																				img/desktop/deliver-desktop@2x.webp 2x">
-							<source type="image/webp" srcset="img/mobile/deliver-mobile@1x.webp 1x,
-																							img/mobile/deliver-mobile@2x.webp 2x">
+		<div class="container  container--first-frame">
+			<header class="page-header  first-frame__page-header">
+				<button class="page-header__button" id="menu-open-btn">
+					<img class="page-header__button-icon" src="images/icons/burger-menu.svg" alt="menu" width="30" height="30">
+				</button>
 
-							<source media="(min-width: 769px)" srcset="img/desktop/deliver-desktop@1x.png 1x,
-																												img/desktop/deliver-desktop@2x.png 2x">
-							<img class="slider__img" src="img/mobile/deliver-mobile@1x.png"
-									 srcset="img/mobile/deliver-mobile@2x.png 2x" alt="Заработай на перелёте" width="224" height="224">
-						</picture>
+				<nav class="main-nav">
+					<div class="main-nav__inner-wrapper">
+						<button class="main-nav__button" id="menu-close-btn">
+							<img src="images/icons/close.svg" alt="close menu" width="30" height="30">
+						</button>
 
-						<h2 class="slider__title  slider__title--short">Заработай на перелёте</h2>
-						<p class="slider__text  slider__text--short">Сообщи нам когда полетишь и что готов перевезти</p>
-						<a class="slider__button  button" href="delivery.html">Я полечу</a>
+						<ul class="menu-list">
+							<li class="menu-list__item">
+								<a class="menu-list__link" href="#">О сервисе</a>
+							</li>
+							<li class="menu-list__item">
+								<a class="menu-list__link" href="#">Цены</a>
+							</li>
+							<li class="menu-list__item">
+								<a class="menu-list__link" href="#">Вопросы и ответы</a>
+							</li>
+							<li class="menu-list__item">
+								<a class="menu-list__link" href="#">Контакты</a>
+							</li>
+						</ul>
+
+						<a class="main-nav__link" href="#">Вход</a>
+					</div>
+				</nav>
+
+				<a class="logo" href="#">
+					<picture class="logo__picture">
+						<source media="(min-width: 1160px)" srcset="images/logo-header-desktop@1x.png 1x,
+																											images/logo-header-desktop@2x.png 2x">
+						<img class="logo__img" src="images/logo-header-mobile@1x.png"
+								 srcset="images/logo-header-mobile@2x.png 2x" alt="Zhiber" width="85" height="50">
+					</picture>
+				</a>
+
+				<ul class="language">
+					<li class="language__item  language__item--active">
+						<a class="language__link" href="#">RU</a>
 					</li>
-
-					<li class="slider__item">
-						<picture>
-							<source type="image/webp" media="(min-width: 769px)" srcset="img/desktop/send-desktop@1x.webp 1x,
-																																				img/desktop/send-desktop@2x.webp 2x">
-							<source type="image/webp" srcset="img/mobile/send-mobile@1x.webp 1x,
-																							img/mobile/send-mobile@2x.webp 2x">
-
-							<source media="(min-width: 769px)" srcset="img/desktop/send-desktop@1x.png 1x,
-																											img/desktop/send-desktop@2x.png 2x">
-							<img class="slider__img" src="img/mobile/send-mobile@1x.png"
-									 srcset="img/mobile/send-mobile@2x.png 2x" alt="Отправляй посылку самолётом" width="224" height="224">
-						</picture>
-
-						<h2 class="slider__title">Отправляй посылку самолётом</h2>
-						<p class="slider__text">Опиши что и куда нужно отправить</p>
-						<a class="slider__button  button  button--orange" href="send.html">Нужно отправить</a>
+					<li class="language__item">
+						<a class="language__link" href="#">KZ</a>
+					</li>
+					<li class="language__item">
+						<a class="language__link" href="#">EN</a>
 					</li>
 				</ul>
-			</main>
 
-			<footer class="page-footer  container__page-footer">
-				<nav class="footer-nav">
-					<ul class="nav-list">
-						<li class="nav-list__item">
-							<a class="nav-list__link" href="offer.html">Оферта</a>
-						</li>
-						<li class="nav-list__item">
-							<a class="nav-list__link" href="contacts.html">Контакты</a>
-						</li>
-						<li class="nav-list__item">
-							<a class="nav-list__link" href="faq.html">FAQ</a>
-						</li>
-					</ul>
-				</nav>
-			</footer>
+				<div class="call">
+					<img class="call__img" src="images/icons/call.svg" alt="call" width="60" height="60">
+
+					<div class="call__right">
+						<a class="call__number" href="tel:+77064074449">
+							+7 706
+							<span class="call__number-large">407-44-49</span>
+						</a>
+
+						<button class="call__text  call__modal-btn">Перезвоните мне</button>
+					</div>
+				</div>
+			</header>
+
+			<div class="main-info">
+				<h1 class="main-info__title">Отправьте посылку с попутчиком</h1>
+
+
+				<div class="main-info__buttons">
+					<button class="main-info__button  button  send-modal-btn">Отправить посылку</button>
+					<button class="main-info__button  main-info__button--deliver  button  deliver-modal-btn">Доставить посылку</button>
+				</div>
+
+				<ul class="info-links">
+					<li class="info-links__item">
+						<a class="info-links__link" href="#">Правила отправки</a>
+					</li>
+					<li class="info-links__item">
+						<a class="info-links__link" href="#">Цены</a>
+					</li>
+					<li class="info-links__item">
+						<a class="info-links__link" href="#">Страховка</a>
+					</li>
+					<li class="info-links__item">
+						<a class="info-links__link" href="#">Безопасность</a>
+					</li>
+					<li class="info-links__item">
+						<a class="info-links__link" href="#">Заработок</a>
+					</li>
+					<li class="info-links__item">
+						<a class="info-links__link" href="#">Ответственность</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="call-buttons">
+				<a class="call-buttons__scroll" href="#page-main">
+					<img class="call-buttons__scroll-icon" src="images/icons/scroll.svg" alt="scroll" width="102" height="72">
+				</a>
+
+				<button class="call-buttons__item  call-buttons__item--call">Позвонить</button>
+				<button class="call-buttons__item  call-buttons__item--call-back  call__modal-btn">Перезвоните мне</button>
+			</div>
+
+			<ul class="socials">
+				<li class="socials__item">
+					<a class="socials__link" href="https://www.instagram.com/zhiber.kz" target="_blank">Instagram</a>
+				</li>
+				<li class="socials__item">
+					<a class="socials__link" href="https://www.facebook.com/zhiber.kz" target="_blank">Facebook</a>
+				</li>
+			</ul>
 		</div>
 
-		<script src="flickity/flickity.pkgd.min.js"></script>
-	</body>
+		<div class="how-works">
+			<button class="how-works__button">
+				<span class="how-works__text">Как это работает?</span>
+
+				<img class="how-works__icon" src="images/icons/play.svg" alt="play" width="68" height="68">
+			</button>
+		</div>
+	</section>
+
+	<main class="page-main" id="page-main">
+		<section class="container  container--section1">
+			<div class="info-bg-clip  info-bg-clip--section1">
+				<div class="info  info--section1">
+					<h2 class="info__title  info__title--centered">
+						Почему <span class="info__pink-title">Zhiber?</span>
+					</h2>
+
+					<p class="info__text  info__text--centered">
+						<span class="info__pink-text">Zhiber</span> — это краудшиппинг-сервис, то есть он соединяет человека, которому необходимо срочно отправить посылку, с тем, кому по пути
+					</p>
+
+					<ul class="info-slider  info__info-slider" data-flickity='{
+				"cellAlign": "center",
+				"contain": true,
+				"pageDots": false,
+				"prevNextButtons": false,
+				"watchCSS": true
+			}'>
+						<li class="info-slider__item">
+							<picture class="info-slider__picture">
+								<img class="info-slider__img  info-slider__img--info1" src="images/index/feature1@1x.png"
+										 																								srcset="images/index/feature1@2x.png 2x" alt="feature1" width="140" height="156">
+							</picture>
+							<p class="info-slider__title">1,5 дня</p>
+							<p class="info-slider__text">Средняя экономия времени при доставке</p>
+						</li>
+						<li class="info-slider__item">
+							<picture class="info-slider__picture">
+								<img class="info-slider__img  info-slider__img--info2" src="images/index/feature2@1x.png"
+										 																								srcset="images/index/feature2@2x.png 2x" alt="feature2" width="165" height="158">
+							</picture>
+							<p class="info-slider__title">Более 200 000</p>
+							<p class="info-slider__text">Средняя экономия времени при доставке</p>
+						</li>
+						<li class="info-slider__item">
+							<picture class="info-slider__picture">
+								<img class="info-slider__img  info-slider__img--info3" src="images/index/feature3@1x.png"
+										 																								srcset="images/index/feature3@2x.png 2x" alt="feature3" width="147" height="162">
+							</picture>
+							<p class="info-slider__title">до 100 %</p>
+							<p class="info-slider__text">Компенсация расходов на поездку</p>
+						</li>
+						<li class="info-slider__item">
+							<picture class="info-slider__picture">
+								<img class="info-slider__img  info-slider__img--info4" src="images/index/feature4@1x.png"
+										 																								srcset="images/index/feature4@2x.png 2x" alt="feature4" width="177" height="145">
+							</picture>
+							<p class="info-slider__title">20 000 тенге</p>
+							<p class="info-slider__text">Средний заработок попутчика</p>
+						</li>
+					</ul>
+
+					<a class="info__about" href="#">О сервисе</a>
+					<p class="info__about-text">Узнайте больше о краудшиппинге</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="container  container--section2">
+			<div class="info-bg-clip  info-bg-clip--section2">
+				<div class="info-wrapper">
+					<div class="info  info--section2">
+						<h2 class="info__title">
+							Я хочу <span class="info__pink-title">доставить</span> посылку
+						</h2>
+
+						<p class="info__text">
+							Собираетесь в командировку или к родным в другой город? Есть возможность сделать хорошее дело <span class="info__pink-text">и даже заработать!</span>
+						</p>
+
+						<ul class="about-slider  info__about-slider" data-flickity='{
+				"cellAlign": "center",
+				"contain": true,
+				"pageDots": false,
+				"prevNextButtons": false,
+				"watchCSS": true
+			}'>
+							<li class="about-slider__item">
+								<img class="about-slider__img" src="images/num1.svg" alt="num1" width="71" height="87">
+								<p class="about-slider__text">Укажите откуда и куда едете, а также время отъезда</p>
+							</li>
+							<li class="about-slider__item">
+								<img class="about-slider__img" src="images/num2.svg" alt="num2" width="80" height="87">
+								<p class="about-slider__text">Получите сообщение от менеджера с подходящим отправлением</p>
+							</li>
+							<li class="about-slider__item">
+								<img class="about-slider__img" src="images/num3.svg" alt="num3" width="80" height="88">
+								<p class="about-slider__text">Свяжитесь, доставьте посылку и заработайте!</p>
+							</li>
+						</ul>
+
+						<form class="form  info__form" action="/">
+							<div class="form-fields-wrapper">
+								<div class="form-field-select-wrapper">
+									<select class="form-field-select" name="city-from" id="city-from">
+										<option class="form-field-select__empty" value="" disabled selected>Откуда</option>
+										<option value="city-name">Нур-Султан</option>
+										<option value="city-name">Алматы</option>
+										<option value="city-name">Атырау</option>
+										<option value="city-name">Актау</option>
+										<option value="city-name">Актобе</option>
+									</select>
+								</div>
+								<div class="form-field-select-wrapper">
+									<select class="form-field-select" name="city-to" id="city-to">
+										<option class="form-field-select__empty" value="" disabled selected>Куда</option>
+										<option value="city-name">Нур-Султан</option>
+										<option value="city-name">Алматы</option>
+										<option value="city-name">Атырау</option>
+										<option value="city-name">Актау</option>
+										<option value="city-name">Актобе</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="form-field-text  form-field-text--date">
+								<input class="form-field-text__input" type="text" name="name" placeholder="Дата поездки" required>
+							</div>
+
+							<button class="form__button  button  deliver-modal-btn">Далее</button>
+						</form>
+
+						<ul class="questions-list  info__questions-list">
+							<li class="questions-list__item">
+								<a class="questions-list__link" href="#">А это безопасно?</a>
+							</li>
+							<li class="questions-list__item">
+								<a class="questions-list__link" href="#">Сколько я заработаю?</a>
+							</li>
+							<li class="questions-list__item">
+								<a class="questions-list__link" href="#">Какая ответственность?</a>
+							</li>
+						</ul>
+
+						<div class="subscribe-info">
+							<p class="subscribe-info__text  subscribe-info__text--bold">Пока не собираетесь в поездку?</p>
+							<p class="subscribe-info__text">Будьте в курсе последних новостей</p>
+							<a class="subscribe-info__link" href="#sub-form">Подпишитесь на новости</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="container  container--section3">
+			<div class="info-bg-clip  info-bg-clip--section3">
+				<div class="info-wrapper">
+					<div class="info  info--section3">
+						<h2 class="info__title">
+							Мне нужно <span class="info__pink-title">отправить</span> посылку
+						</h2>
+
+						<p class="info__text">
+							Нужно срочно передать документы, лекарства или подарки родным? <span class="info__pink-text">Отправьте посылку</span> с человеком, которому по пути!
+						</p>
+
+						<ul class="about-slider  info__about-slider" data-flickity='{
+				"cellAlign": "center",
+				"contain": true,
+				"pageDots": false,
+				"prevNextButtons": false,
+				"watchCSS": true
+			}'>
+							<li class="about-slider__item">
+								<img class="about-slider__img" src="images/num1.svg" alt="num1" width="71" height="87">
+								<p class="about-slider__text">Укажите что, куда и когда нужно отправить</p>
+							</li>
+							<li class="about-slider__item">
+								<img class="about-slider__img" src="images/num2.svg" alt="num2" width="80" height="87">
+								<p class="about-slider__text">Получите сообщение от менеджера с информацией о попутчике</p>
+							</li>
+							<li class="about-slider__item">
+								<img class="about-slider__img" src="images/num3.svg" alt="num3" width="80" height="88">
+								<p class="about-slider__text">Свяжитесь и договоритесь о доставке</p>
+							</li>
+						</ul>
+
+						<form class="form  info__form" action="/">
+							<div class="form-fields-wrapper">
+								<div class="form-field-select-wrapper">
+									<select class="form-field-select  field-select--delivery-city-from" name="city-from" id="city-from">
+										<option class="form-field-select__empty" value="" disabled selected>Откуда</option>
+										<option value="city-name">Нур-Султан</option>
+										<option value="city-name">Алматы</option>
+										<option value="city-name">Атырау</option>
+										<option value="city-name">Актау</option>
+										<option value="city-name">Актобе</option>
+									</select>
+								</div>
+								<div class="form-field-select-wrapper">
+									<select class="form-field-select  field-select--delivery-city-to" name="city-to" id="city-to">
+										<option class="form-field-select__empty" value="" disabled selected>Куда</option>
+										<option value="city-name">Нур-Султан</option>
+										<option value="city-name">Алматы</option>
+										<option value="city-name">Атырау</option>
+										<option value="city-name">Актау</option>
+										<option value="city-name">Актобе</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="form-field-text  form-field-text--date">
+								<input class="form-field-text__input" type="text" name="name" placeholder="Не позже, чем" required>
+							</div>
+
+							<button class="form__button  button  send-modal-btn">Далее</button>
+						</form>
+
+						<ul class="questions-list  info__questions-list">
+							<li class="questions-list__item">
+								<a class="questions-list__link" href="#">Какой максимальный вес посылки?</a>
+							</li>
+							<li class="questions-list__item">
+								<a class="questions-list__link" href="#">Сколько стоит отправка?</a>
+							</li>
+							<li class="questions-list__item">
+								<a class="questions-list__link" href="#">Есть ли страховка?</a>
+							</li>
+						</ul>
+
+						<div class="subscribe-info">
+							<p class="subscribe-info__text  subscribe-info__text--bold">Пока не готовы что-либо отправить?</p>
+							<p class="subscribe-info__text">Будьте в курсе последних новостей</p>
+							<a class="subscribe-info__link" href="#sub-form">Подпишитесь на новости</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="container  container--section4">
+			<div class="info-bg-clip  info-bg-clip--section4">
+				<div class="info  info--section4">
+					<h2 class="info__title">
+						Наши <span class="info__pink-title">события</span>
+					</h2>
+
+					<p class="info__text">Узнавайте о наших событиях из социальных сетей.</p>
+
+					<div class="events">
+						<div class="social-widgets  events__social-widgets">
+							<div class="social-widgets__insta-mobile">
+								<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+								<div class="elfsight-app-5340802c-bcbc-468f-88f1-bcc4f0785edd"></div>
+							</div>
+
+							<div class="social-widgets__fb-desktop">
+								<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+								<div class="elfsight-app-20ac2733-fbb2-4b5a-86c6-b4561262fd14"></div>
+							</div>
+
+							<div class="social-widgets__insta-desktop">
+								<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+								<div class="elfsight-app-dae850bb-b183-48da-90a3-5623e5fcbd5e"></div>
+							</div>
+						</div>
+
+						<form class="sub-form" id="sub-form" action="/">
+							<h2 class="sub-form__title">Будьте в курсе</h2>
+							<p class="sub-form__text">Zhiber сообщает об интересных направлениях для отправки посылок. Подписывайтесь на новости.</p>
+
+							<div class="field-text  sub-form__field-text">
+								<input class="field-text__input  sub-form__input" type="text" inputmode="email" name="email" placeholder="Электронная почта" required>
+							</div>
+
+							<button class="sub-form__button  button">Подписаться</button>
+
+							<p class="sub-form__info-text">1-2 письма в неделю. Только тематическая информация. Отписаться можно в любой момент</p>
+						</form>
+					</div>
+				</div>
+
+				<footer class="page-footer">
+					<div class="footer-links">
+						<a class="footer-links__logo" href="#">
+							<img class="slider__img" src="images/logo-footer@1x.png"
+									 srcset="images/logo-footer@2x.png 2x" alt="zhiber" width="130" height="16">
+						</a>
+
+						<a class="footer-links__offer" href="#">Публичная оферта</a>
+					</div>
+
+					<span class="page-footer__copyright">© Zhiber, 2020</span>
+				</footer>
+			</div>
+		</section>
+	</main>
+
+	<section class="modal  modal--send">
+		<form class="modal-form  modal-form--send" action="/">
+			<button class="modal-form__close">
+				<img class="modal-form__close-icon" src="images/icons/close.svg" alt="close" width="30" height="30">
+			</button>
+
+			<h2 class="modal-form__title">Хотите отправить посылку или документы?</h2>
+
+			<p class="modal-form__text">Мы подберем для вас попутчика, который доставит ваше отправление.</p>
+
+			<div class="fields-wrapper">
+				<div class="selects-wrapper  fields-wrapper__selects-wrapper">
+					<div class="field-select-wrapper">
+						<select class="field-select  field-select--send-city-from" name="city-from" id="from">
+							<option class="field-select__empty" value="" disabled selected>Откуда</option>
+							<option value="city-name">Нур-Султан</option>
+							<option value="city-name">Алматы</option>
+							<option value="city-name">Атырау</option>
+							<option value="city-name">Актау</option>
+							<option value="city-name">Актобе</option>
+						</select>
+					</div>
+					<div class="field-select-wrapper">
+						<select class="field-select  field-select--send-city-to" name="city-to" id="to">
+							<option class="field-select__empty" value="" disabled selected>Куда</option>
+							<option value="city-name">Нур-Султан</option>
+							<option value="city-name">Алматы</option>
+							<option value="city-name">Атырау</option>
+							<option value="city-name">Актау</option>
+							<option value="city-name">Актобе</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="field-text  field-text--date">
+					<input class="field-text__input" type="text" name="name" placeholder="Не позже, чем" required>
+				</div>
+			</div>
+
+			<div class="fields-wrapper">
+				<h2 class="modal-form__title  modal-form__title--centered">Что отправить?</h2>
+
+				<div class="radio-wrapper  fields-wrapper__radio-wrapper">
+					<label class="field-radio">
+						<input class="field-radio__input" type="radio" name="payment-method" checked>
+						<span class="field-radio__text  field-radio__text--doc">Документы</span>
+					</label>
+
+					<label class="field-radio">
+						<input class="field-radio__input" type="radio" name="payment-method" id="radio-other-input">
+						<span class="field-radio__text  field-radio__text--parcel" id="radio-other-btn">Посылка</span>
+					</label>
+				</div>
+
+				<p class="field-radio__warning-text">Посылка должна быть не тяжелее 5 килограмм</p>
+
+				<div class="field-text  field-text--parcel" id="parcel-description">
+					<textarea class="field-text__input  field-text__textarea" placeholder="Описание посылки"></textarea>
+				</div>
+			</div>
+
+			<div class="fields-wrapper">
+				<h2 class="modal-form__title  modal-form__title--centered">Как с вами связаться?</h2>
+
+				<div class="field-select-wrapper  field-select-wrapper--bordered">
+					<select class="field-select  field-select--bordered  field-select--contacts  field-select--send-contacts" name="city-from">
+						<option class="field-select__empty" value="" disabled selected>Способ связи</option>
+						<option value="email">E-mail</option>
+						<option value="telegram">Telegram</option>
+						<option value="whatsapp">Whatsapp</option>
+					</select>
+				</div>
+
+				<div class="field-text  field-text--bordered  field-text--contacts">
+					<input class="field-text__input  field-text__input--bordered  field-text__input--contacts" type="text" name="contacts" placeholder="E-mail" required>
+				</div>
+				<div class="field-text  field-text--bordered  field-text--phone-number">
+				<input class="field-text__input  field-text__input--bordered  field-text__input--phone" type="text" inputmode="numeric" name="phone" placeholder="Whatsapp" required>
+				</div>
+
+				<button class="modal-form__button  button">Оставить заявку</button>
+			</div>
+
+			<p class="modal-form__agreement">
+				Нажав на кнопку, вы соглашаетесь с <a class="modal-form__agreement-link" href="#">публичной офертой</a>. Ваши персональные данные охраняются законом «О персональных данных РК»
+			</p>
+		</form>
+	</section>
+
+	<section class="modal  modal--delivery">
+		<form class="modal-form  modal-form--delivery" action="/">
+			<button class="modal-form__close">
+				<img class="modal-form__close-icon" src="images/icons/close.svg" alt="close" width="30" height="30">
+			</button>
+
+			<h2 class="modal-form__title">Хотите доставить посылку?</h2>
+
+			<p class="modal-form__text">
+				Мы поможем заработать в своей поездке! Оставьте информацию о том, куда и когда едете и мы подберем для вас подходящее отправление.
+			</p>
+
+			<div class="fields-wrapper">
+				<div class="selects-wrapper  fields-wrapper__selects-wrapper">
+					<div class="field-select-wrapper">
+						<select class="field-select  field-select--delivery-city-from" name="city-from" id="city-from">
+							<option class="field-select__empty" value="" disabled selected>Откуда</option>
+							<option value="city-name">Нур-Султан</option>
+							<option value="city-name">Алматы</option>
+							<option value="city-name">Атырау</option>
+							<option value="city-name">Актау</option>
+							<option value="city-name">Актобе</option>
+						</select>
+					</div>
+					<div class="field-select-wrapper">
+						<select class="field-select  field-select--delivery-city-to" name="city-to" id="city-to">
+							<option class="field-select__empty" value="" disabled selected>Куда</option>
+							<option value="city-name">Нур-Султан</option>
+							<option value="city-name">Алматы</option>
+							<option value="city-name">Атырау</option>
+							<option value="city-name">Актау</option>
+							<option value="city-name">Актобе</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="field-text  field-text--date">
+					<input class="field-text__input" type="text" name="name" placeholder="Дата поездки" required>
+				</div>
+			</div>
+
+			<div class="fields-wrapper">
+				<h2 class="modal-form__title  modal-form__title--centered">Как с вами связаться?</h2>
+
+				<div class="field-select-wrapper  field-select-wrapper--bordered">
+					<select class="field-select  field-select--bordered  field-select--contacts  field-select--send-contacts" name="city-from">
+						<option class="field-select__empty" value="" disabled selected>Способ связи</option>
+						<option value="email">E-mail</option>
+						<option value="telegram">Telegram</option>
+						<option value="whatsapp">Whatsapp</option>
+					</select>
+				</div>
+
+				<div class="field-text  field-text--bordered  field-text--contacts">
+					<input class="field-text__input  field-text__input--bordered  field-text__input--contacts" type="text" name="contacts" placeholder="E-mail" required>
+				</div>
+				<div class="field-text  field-text--bordered  field-text--phone-number">
+					<input class="field-text__input  field-text__input--bordered  field-text__input--phone" type="text" inputmode="numeric" name="phone" placeholder="Whatsapp" required>
+				</div>
+
+				<button class="modal-form__button  button">Оставить заявку</button>
+			</div>
+
+			<p class="modal-form__agreement">
+				Нажав на кнопку, вы соглашаетесь с <a class="modal-form__agreement-link" href="#">публичной офертой</a>. Ваши персональные данные охраняются законом «О персональных данных РК»
+			</p>
+		</form>
+	</section>
+
+	<section class="modal  modal--call">
+		<form class="modal-form  modal-form--call" action="/">
+			<button class="modal-form__close">
+				<img class="modal-form__close-icon" src="images/icons/close.svg" alt="close" width="30" height="30">
+			</button>
+
+			<h2 class="modal-form__title">Закажите обратный звонок</h2>
+
+			<p class="modal-form__text">Укажите свой номер телефона и мы перезвоним вам в ближайшее время.</p>
+
+			<div class="modal-form__flex-wrapper">
+				<div class="field-text  field-text--bordered  field-text--phone">
+					<input class="field-text__input  field-text__input--bordered" type="text" inputmode="numeric" name="phone" placeholder="Ваш номер телефона" required>
+				</div>
+
+				<button class="modal-form__button  button">Перезвоните мне</button>
+			</div>
+		</form>
+	</section>
+
+	<section class="modal  modal--alert">
+		<div class="alert-message  alert-message--error">
+			<button class="modal-form__close  alert-message__close">
+				<img class="modal-form__close-icon" src="images/icons/close-white.svg" alt="close" width="30" height="30">
+			</button>
+
+			<p class="alert-message__text">
+				Ваше сообщение отправлено!<br>
+				Хорошего дня!
+			</p>
+		</div>
+	</section>
+
+	<section class="modal  modal--video">
+		<div class="yt-video">
+			<button class="modal-form__close  yt-video__close">
+				<img class="modal-form__close-icon" src="images/icons/close.svg" alt="close" width="30" height="30">
+			</button>
+
+			<iframe class="yt-video__frame" width="560" height="315" src="https://www.youtube.com/embed/7uBqNgxAuBA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</section>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="flickity/flickity.pkgd.min.js"></script>
+	<script src="js/scripts.min.js"></script>
+	<script>
+      function checkHeight() {
+          if ($(window).height() < 780) {
+              $('.first-frame').addClass('.first-frame--auto-height');
+          } else {
+              $('.first-frame').removeClass('.first-frame--auto-height');
+          }
+      }
+
+      $(document).ready(function () {
+          checkHeight();
+      });
+
+      $(window).on('resize', function () {
+          checkHeight();
+      });
+	</script>
+</body>
 </html>

@@ -1,48 +1,214 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Сервис доставки ZHIBER</title>
-		<link rel="preload" href="/fonts/geometria800.woff2" as="font">
-		<link rel="preload" href="/fonts/geometria500.woff2" as="font">
-		<link rel="stylesheet" href="flickity/flickity.min.css">
-		<link rel="stylesheet" href="css/style.min.css">
-	</head>
-	<body>
-		<div class="container">
-			<main class="page-main  container__page-main">
-				<div class="logo  page-main__logo">
-					<a class="logo__link" href="index.html">
-						<img class="logo__img" src="img/logotype.svg" alt="логотип ZHIBEK" width="88" height="40">
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Сервис Zhiber</title>
+	<link rel="preload" href="/fonts/montserrat700.woff2" as="font">
+	<link rel="preload" href="/fonts/montserrat500.woff2" as="font">
+	<link rel="stylesheet" href="flickity/flickity.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="body-100vh">
+	<div class="page-wrapper">
+		<section class="faq-header">
+			<div class="container  container--first-frame">
+				<header class="page-header">
+					<button class="page-header__button" id="menu-open-btn">
+						<img class="page-header__button-icon" src="images/icons/burger-menu.svg" alt="menu" width="30" height="30">
+					</button>
+
+					<nav class="main-nav">
+						<div class="main-nav__inner-wrapper">
+							<button class="main-nav__button" id="menu-close-btn">
+								<img src="images/icons/close.svg" alt="close menu" width="30" height="30">
+							</button>
+
+							<ul class="menu-list">
+								<li class="menu-list__item">
+									<a class="menu-list__link" href="#">О сервисе</a>
+								</li>
+								<li class="menu-list__item">
+									<a class="menu-list__link" href="#">Цены</a>
+								</li>
+								<li class="menu-list__item">
+									<a class="menu-list__link" href="#">Вопросы и ответы</a>
+								</li>
+								<li class="menu-list__item">
+									<a class="menu-list__link" href="#">Контакты</a>
+								</li>
+							</ul>
+
+							<a class="main-nav__link" href="#">Вход</a>
+						</div>
+					</nav>
+
+					<a class="logo" href="#">
+						<picture class="logo__picture">
+							<source media="(min-width: 1160px)" srcset="images/logo-desktop@1x.png 1x,
+																												images/logo-desktop@2x.png 2x">
+							<img class="logo__img" src="images/logo-mobile@1x.png"
+									 srcset="images/logo-mobile@2x.png 2x" alt="Zhiber" width="85" height="50">
+						</picture>
 					</a>
-				</div>
 
-				<div class="contacts  page-main__contacts">
-					<h2 class="contacts__title">Контакты</h2>
-					<span class="contacts__name">Имя</span>
-					<a class="contacts__link" href="#">e-mail</a>
-					<a class="contacts__link" href="#">+7 777 157 54 31</a>
-				</div>
-			</main>
-
-			<footer class="page-footer  container__page-footer">
-				<nav class="footer-nav">
-					<ul class="nav-list">
-						<li class="nav-list__item">
-							<a class="nav-list__link" href="offer.html">Оферта</a>
+					<ul class="language">
+						<li class="language__item  language__item--active">
+							<a class="language__link" href="#">RU</a>
 						</li>
-						<li class="nav-list__item">
-							<a class="nav-list__link">Контакты</a>
+						<li class="language__item">
+							<a class="language__link" href="#">KZ</a>
 						</li>
-						<li class="nav-list__item">
-							<a class="nav-list__link" href="faq.html">FAQ</a>
+						<li class="language__item">
+							<a class="language__link" href="#">EN</a>
 						</li>
 					</ul>
-				</nav>
-			</footer>
-		</div>
 
-		<script src="flickity/flickity.pkgd.min.js"></script>
-	</body>
+					<div class="call">
+						<img class="call__img" src="images/icons/call.svg" alt="call" width="60" height="60">
+
+						<div class="call__right">
+							<a class="call__number" href="tel:+77064074449">
+								+7 706
+								<span class="call__number-large">407-44-49</span>
+							</a>
+
+							<button class="call__text  call__modal-btn">Перезвоните мне</button>
+						</div>
+					</div>
+				</header>
+			</div>
+		</section>
+
+		<main class="page-main" id="page-main">
+			<article class="contacts">
+				<h1 class="contacts__title">Контактная информация</h1>
+				<p class="contacts__intro">
+					Мы рады, что вы используете сервис Zhiber.<br>
+					Остались вопросы или пожелания по улучшению нашего сервиса — напишите нам.
+				</p>
+
+				<section class="contacts-section  contacts__contacts-section">
+					<div class="contacts-block-wrapper">
+						<div class="contacts-block  contacts-block-wrapper__contacts-block">
+							<a class="contacts-block__link" href="https://telegram.me/Zhiberkz" target="_blank">
+								<img class="contacts-block__icon" src="images/icons/contacts/telegram.svg" alt="telegram" width="60" height="60">
+
+								<div class="contacts-block__right">
+									<span class="contacts-block__title">Канал</span>
+									<span class="contacts-block__text">Telegram</span>
+								</div>
+							</a>
+						</div>
+
+						<div class="contacts-block  contacts-block-wrapper__contacts-block">
+							<a class="contacts-block__link" href="https://wa.me/77064074449" target="_blank">
+								<img class="contacts-block__icon" src="images/icons/contacts/whatsapp.svg" alt="whatsapp" width="60" height="60">
+
+								<div class="contacts-block__right">
+									<span class="contacts-block__title">Группа</span>
+									<span class="contacts-block__text">WhatsApp</span>
+								</div>
+							</a>
+						</div>
+
+						<div class="contacts-block  contacts-block-wrapper__contacts-block">
+							<a class="contacts-block__link" href="mailto:info@zhiber.kz">
+								<img class="contacts-block__icon" src="images/icons/contacts/email.svg" alt="email" width="60" height="60">
+
+								<div class="contacts-block__right">
+									<span class="contacts-block__title">Электронная</span>
+									<span class="contacts-block__text">почта</span>
+								</div>
+							</a>
+						</div>
+					</div>
+				</section>
+
+				<section class="contacts-section  contacts__contacts-section">
+					<h2 class="contacts-section__title">Телефон поддержки клиентов</h2>
+
+					<div class="contacts-block-wrapper">
+						<div class="contacts-block  contacts-block-wrapper__contacts-block">
+							<a class="contacts-block__link" href="tel:+77064074449" >
+								<img class="contacts-block__icon" src="images/icons/contacts/phone.svg" alt="phone" width="60" height="60">
+
+								<div class="contacts-block__right">
+									<span class="contacts-block__title">+7 706</span>
+									<span class="contacts-block__text">407-44-49</span>
+								</div>
+							</a>
+						</div>
+					</div>
+				</section>
+
+				<section class="contacts-section  contacts__contacts-section">
+					<h2 class="contacts-section__title">Следите за новостями в социальных сетях</h2>
+
+					<div class="contacts-block-wrapper">
+						<div class="contacts-block  contacts-block-wrapper__contacts-block">
+							<a class="contacts-block__link" href="https://www.instagram.com/zhiber.kz" target="_blank">
+								<img class="contacts-block__icon" src="images/icons/contacts/instagram.svg" alt="instagram" width="60" height="60">
+
+								<div class="contacts-block__right">
+									<span class="contacts-block__title">Аккаунт</span>
+									<span class="contacts-block__text">Instagram</span>
+								</div>
+							</a>
+						</div>
+
+						<div class="contacts-block  contacts-block-wrapper__contacts-block">
+							<a class="contacts-block__link" href="https://www.facebook.com/zhiber.kz" target="_blank">
+								<img class="contacts-block__icon" src="images/icons/contacts/facebook.svg" alt="facebook" width="60" height="60">
+
+								<div class="contacts-block__right">
+									<span class="contacts-block__title">Группа</span>
+									<span class="contacts-block__text">Facebook</span>
+								</div>
+							</a>
+						</div>
+					</div>
+				</section>
+			</article>
+		</main>
+
+		<footer class="page-footer  body-100vh__page-footer">
+			<div class="container  container--footer">
+				<div class="footer-links">
+					<a class="footer-links__logo" href="#">
+						<img class="slider__img" src="images/logo-footer@1x.png"
+								 srcset="images/logo-footer@2x.png 2x" alt="zhiber" width="130" height="16">
+					</a>
+
+					<a class="footer-links__offer" href="#">Публичная оферта</a>
+				</div>
+
+				<span class="page-footer__copyright">© Zhiber, 2020</span>
+			</div>
+		</footer>
+	</div>
+
+	<section class="modal  modal--call">
+		<form class="modal-form  modal-form--call" action="/">
+			<button class="modal-form__close">
+				<img class="modal-form__close-icon" src="images/icons/close.svg" alt="close" width="30" height="30">
+			</button>
+
+			<h2 class="modal-form__title">Закажите обратный звонок</h2>
+
+			<p class="modal-form__text">Укажите свой номер телефона и мы перезвоним вам в ближайшее время.</p>
+
+			<div class="modal-form__flex-wrapper">
+				<div class="field-text  field-text--bordered  field-text--phone">
+					<input class="field-text__input  field-text__input--bordered" type="text" inputmode="numeric" name="phone" placeholder="Ваш номер телефона" required>
+				</div>
+
+				<button class="modal-form__button  button">Перезвоните мне</button>
+			</div>
+		</form>
+	</section>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="js/scripts.min.js"></script>
+</body>
 </html>

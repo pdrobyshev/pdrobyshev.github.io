@@ -1,97 +1,171 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Сервис доставки ZHIBER</title>
-		<link rel="preload" href="/fonts/geometria800.woff2" as="font">
-		<link rel="preload" href="/fonts/geometria500.woff2" as="font">
-		<link rel="stylesheet" href="flickity/flickity.min.css">
-		<link rel="stylesheet" href="css/style.min.css">
-	</head>
-	<body>
-		<div class="modal-overlay  modal-hide"></div>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Сервис Zhiber</title>
+	<link rel="preload" href="/fonts/montserrat700.woff2" as="font">
+	<link rel="preload" href="/fonts/montserrat500.woff2" as="font">
+	<link rel="stylesheet" href="flickity/flickity.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="body-100vh">
+	<div class="page-wrapper">
+		<section class="faq-header">
+			<div class="container  container--first-frame">
+				<header class="page-header">
+					<button class="page-header__button" id="menu-open-btn">
+						<img class="page-header__button-icon" src="images/icons/burger-menu.svg" alt="menu" width="30" height="30">
+					</button>
 
-		<div class="container">
-			<main class="page-main  container__page-main">
-				<div class="logo  page-main__logo">
-					<a class="logo__link" href="index.html">
-						<img class="logo__img" src="img/logotype.svg" alt="логотип ZHIBEK" width="88" height="40">
+					<nav class="main-nav">
+						<div class="main-nav__inner-wrapper">
+							<button class="main-nav__button" id="menu-close-btn">
+								<img src="images/icons/close.svg" alt="close menu" width="30" height="30">
+							</button>
+
+							<ul class="menu-list">
+								<li class="menu-list__item">
+									<a class="menu-list__link" href="#">О сервисе</a>
+								</li>
+								<li class="menu-list__item">
+									<a class="menu-list__link" href="#">Цены</a>
+								</li>
+								<li class="menu-list__item">
+									<a class="menu-list__link" href="#">Вопросы и ответы</a>
+								</li>
+								<li class="menu-list__item">
+									<a class="menu-list__link" href="#">Контакты</a>
+								</li>
+							</ul>
+
+							<a class="main-nav__link" href="#">Вход</a>
+						</div>
+					</nav>
+
+					<a class="logo" href="#">
+						<picture class="logo__picture">
+							<source media="(min-width: 1160px)" srcset="images/logo-desktop@1x.png 1x,
+																												images/logo-desktop@2x.png 2x">
+							<img class="logo__img" src="images/logo-mobile@1x.png"
+									 srcset="images/logo-mobile@2x.png 2x" alt="Zhiber" width="85" height="50">
+						</picture>
 					</a>
-				</div>
 
-				<div class="faq  block  page-main__faq">
-					<h2 class="faq__title">FAQ</h2>
-
-					<ul class="questions">
-						<li class="questions__item">
-							<span class="questions__question">Как это работает?</span>
-							<p class="questions__answer">
-								Мы очень часто слышим слова «оферта», «публичная оферта», «не является публичной офертой», но не всегда понимаем их смысл. На самом деле, эти понятия не так уж и далеки от нас. Представьте себе ситуацию: парень предлагает девушке "руку и сердце" и делает.
-							</p>
+					<ul class="language">
+						<li class="language__item  language__item--active">
+							<a class="language__link" href="#">RU</a>
 						</li>
-						<li class="questions__item">
-							<span class="questions__question">Второй вопрос</span>
-							<p class="questions__answer">
-								Мы очень часто слышим слова «оферта», «публичная оферта», «не является публичной офертой», но не всегда понимаем их смысл. На самом деле, эти понятия не так уж и далеки от нас.
-							</p>
+						<li class="language__item">
+							<a class="language__link" href="#">KZ</a>
 						</li>
-						<li class="questions__item">
-							<span class="questions__question">Третий вопрос</span>
-							<p class="questions__answer">
-								Мы очень часто слышим слова «оферта», «публичная оферта», «не является публичной офертой», но не всегда понимаем их смысл.
-							</p>
+						<li class="language__item">
+							<a class="language__link" href="#">EN</a>
 						</li>
 					</ul>
 
-					<button class="faq__button" id="question-modal-button">Задать свой вопрос</button>
-				</div>
-			</main>
+					<div class="call">
+						<img class="call__img" src="images/icons/call.svg" alt="call" width="60" height="60">
 
-			<footer class="page-footer  container__page-footer">
-				<nav class="footer-nav">
-					<ul class="nav-list">
-						<li class="nav-list__item">
-							<a class="nav-list__link" href="offer.html">Оферта</a>
-						</li>
-						<li class="nav-list__item">
-							<a class="nav-list__link" href="contacts.html">Контакты</a>
-						</li>
-						<li class="nav-list__item">
-							<a class="nav-list__link">FAQ</a>
-						</li>
-					</ul>
-				</nav>
-			</footer>
-		</div>
+						<div class="call__right">
+							<a class="call__number" href="tel:+77064074449">
+								+7 706
+								<span class="call__number-large">407-44-49</span>
+							</a>
 
-		<section class="modal  modal--question  modal-hide">
-			<form class="modal-form  block" action="/">
-				<div class="modal-form-inner-wrapper">
-					<div class="modal-form__header">
-						<h2 class="modal-form__title">Свой вопрос</h2>
-
-						<button class="modal-form__close" id="question-modal-close-button">
-							<img class="modal-form__close-icon" src="img/icon-close.svg" alt="иконка закрытия модалки" width="30" height="30">
-						</button>
+							<button class="call__text  call__modal-btn">Перезвоните мне</button>
+						</div>
 					</div>
-
-					<div class="field-text">
-						<input class="field-text__input" type="text" placeholder="Ваше имя" autofocus>
-					</div>
-					<div class="field-text">
-						<input class="field-text__input" type="email" inputmode="email" placeholder="E-mail">
-					</div>
-					<div class="field-text">
-						<textarea class="field-text__input  field-text__textarea" name="question" placeholder="Ваш вопрос"></textarea>
-					</div>
-
-					<button class="modal-form__button  button  button--orange">Оформить заказ</button>
-				</div>
-			</form>
+				</header>
+			</div>
 		</section>
 
-		<script src="flickity/flickity.pkgd.min.js"></script>
-		<script src="js/question-modal.js"></script>
-	</body>
+		<main class="page-main" id="page-main">
+			<article class="faq">
+				<h1 class="faq__title">Вопросы и ответы</h1>
+				<p class="faq__intro">
+					Здесь собраны ответы на большинство вопросов, которые интересуют наших клиентов. Пожалуйста, ознакомьтесь с ними. В случае, если вы не найдете ответа на свой вопрос, пожалуйста, свяжитесь с нами.
+				</p>
+
+				<ul class="faq-list">
+					<li class="faq-list__item">
+						<a class="faq-list__question" href="#">А это безопасно?</a>
+						<p class="faq-list__answer">
+							Если соблюдать все правила, да. Мы настоятельно рекомендуем проверять содержимое передаваемых (или доставляемых) посылок. Для нас важна безопасность наших пользователей, поэтому мы разработали список обязательных к соблюдению <a class="faq-list__link" href="#">правил</a>.
+						</p>
+					</li>
+					<li class="faq-list__item">
+						<a class="faq-list__question" href="#">Сколько я заработаю?</a>
+						<p class="faq-list__answer">
+							Zhiber позволяет заработать попутчикам. Если вы собираетесь в поездку, вы можете взять с собой посылку или документы. Доставить их в оговоренное место (на вокзал, в аэропорт или в городе) и получить за это вознаграждение. Рекомендации по ценообразованию вы получите в разделе «<a class="faq-list__link" href="#">Цены</a>».
+						</p>
+					</li>
+					<li class="faq-list__item">
+						<a class="faq-list__question" href="#">Какая ответственность за доставку?</a>
+						<p class="faq-list__answer">
+							Перед использованием нашего сервиса рекомендуем ознакомиться с <a class="faq-list__link" href="#">публичной офертой</a>. Сервис не несет ответственность за сохранность документов или посылок. Zhiber помогает найти попутчика и заработать на своей поездке.
+						</p>
+					</li>
+					<li class="faq-list__item">
+						<a class="faq-list__question" href="#">Посылку какого максимального веса я могу отправить?</a>
+						<p class="faq-list__answer">
+							Как правило, с помощью Zhiber отправляют документы или посылки до 5 кг. В исключительных случаях (когда попутчик едет на поезде или имеет багаж 20 кг) можно отправить посылку с большим весом.
+						</p>
+					</li>
+					<li class="faq-list__item">
+						<a class="faq-list__question" href="#">Сколько стоит отправить посылку или документ?</a>
+						<p class="faq-list__answer">
+							Преимущества краудшиппингового сервиса в том, что стоимость отправления устанавливаете вы. Мы не диктуем цены, лишь можем подсказать рыночную стоимость по вашему направлению.
+						</p>
+					</li>
+				</ul>
+			</article>
+		</main>
+
+		<footer class="page-footer  body-100vh__page-footer">
+			<div class="container  container--footer">
+				<div class="footer-links">
+					<a class="footer-links__logo" href="#">
+						<img class="slider__img" src="images/logo-footer@1x.png"
+								 srcset="images/logo-footer@2x.png 2x" alt="zhiber" width="130" height="16">
+					</a>
+
+					<a class="footer-links__offer" href="#">Публичная оферта</a>
+				</div>
+
+				<span class="page-footer__copyright">© Zhiber, 2020</span>
+			</div>
+		</footer>
+	</div>
+
+	<section class="modal  modal--call">
+		<form class="modal-form  modal-form--call" action="/">
+			<button class="modal-form__close">
+				<img class="modal-form__close-icon" src="images/icons/close.svg" alt="close" width="30" height="30">
+			</button>
+
+			<h2 class="modal-form__title">Закажите обратный звонок</h2>
+
+			<p class="modal-form__text">Укажите свой номер телефона и мы перезвоним вам в ближайшее время.</p>
+
+			<div class="modal-form__flex-wrapper">
+				<div class="field-text  field-text--bordered  field-text--phone">
+					<input class="field-text__input  field-text__input--bordered" type="text" inputmode="numeric" name="phone" placeholder="Ваш номер телефона" required>
+				</div>
+
+				<button class="modal-form__button  button">Перезвоните мне</button>
+			</div>
+		</form>
+	</section>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="js/scripts.min.js"></script>
+	<script>
+      $('.faq-list__question').on('click', function () {
+          $(this).parent().find('.faq-list__answer').slideToggle(300);
+          $(this).toggleClass('active');
+          $(this).parent().toggleClass('active');
+      });
+	</script>
+</body>
 </html>
