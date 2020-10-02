@@ -34,6 +34,8 @@
   src: url("../fonts/montserrat400.woff2") format("woff2"), url("../fonts/montserrat400.woff") format("woff"); }
 
 html {
+  height: 100%;
+  height: -webkit-fill-available;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   scroll-behavior: smooth; }
@@ -47,6 +49,7 @@ html {
 body {
   position: relative;
   min-width: 320px;
+  height: 100%;
   margin: 0;
   padding: 0;
   color: #252554;
@@ -670,16 +673,6 @@ a {
     @media (min-width: 1160px) {
       .faq-header::before {
         display: none; } }
-
-@media (min-width: 1160px) {
-  .page-wrapper {
-    background-image: url("../images/header-bg-desktop@1x.png");
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-size: 100%; } }
-  @media (min-width: 1160px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1160px) and (min-resolution: 144dpi), (min-width: 1160px) and (min-resolution: 1.5dppx) {
-    .page-wrapper {
-      background-image: url("../images/header-bg-desktop@2x.png"); } }
 
 .first-frame {
   position: relative;
@@ -2746,7 +2739,17 @@ a {
     position: relative;
     z-index: 1; } }
 
-.body-100vh {
+@media (min-width: 1160px) {
+  .page-wrapper {
+    background-image: url("../images/header-bg-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100%; } }
+  @media (min-width: 1160px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1160px) and (min-resolution: 144dpi), (min-width: 1160px) and (min-resolution: 1.5dppx) {
+    .page-wrapper {
+      background-image: url("../images/header-bg-desktop@2x.png"); } }
+
+.page-wrapper--100vh {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2754,9 +2757,11 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100vh; }
-  .body-100vh__page-footer {
-    margin-top: auto; }
+  min-height: 100vh;
+  min-height: -webkit-fill-available; }
+
+.page-wrapper__page-footer {
+  margin-top: auto; }
 
 .body-overflow {
   height: 100vh;

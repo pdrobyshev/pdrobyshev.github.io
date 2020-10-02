@@ -633,22 +633,5 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="flickity/flickity.pkgd.min.js"></script>
 	<script src="js/scripts.min.js"></script>
-	<script>
-      function checkHeight() {
-          if ($(window).height() < 780) {
-              $('.first-frame').addClass('.first-frame--auto-height');
-          } else {
-              $('.first-frame').removeClass('.first-frame--auto-height');
-          }
-      }
-
-      $(document).ready(function () {
-          checkHeight();
-      });
-
-      $(window).on('resize', function () {
-          checkHeight();
-      });
-	</script>
 </body>
 </html>

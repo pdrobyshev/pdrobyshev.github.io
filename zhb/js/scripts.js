@@ -21,6 +21,42 @@ $('.call__modal-btn').on('click', function () {
 	$('body').addClass('body-overflow');
 });
 
+function checkHeight() {
+	if ($(window).height() < 780) {
+		$('.first-frame').addClass('first-frame--auto-height');
+	} else {
+		$('.first-frame').removeClass('first-frame--auto-height');
+	}
+}
+
+$(document).ready(function () {
+	checkHeight();
+});
+
+$(window).on('resize', function () {
+	checkHeight();
+});
+
+function checkSlider() {
+	if ($(window).outerWidth() >= 1360) {
+		if ($('.intro-slider__item').parent().is('.intro-slider')) {
+			$('.intro-slider__item').unwrap();
+		}
+	} else {
+		if (!$('.intro-slider__item').parent().is('.intro-slider')) {
+			$('.intro-slider__item').wrapAll('<ul class="intro-slider"></ul>');
+		}
+	}
+}
+
+$(document).ready(function () {
+	checkSlider();
+});
+
+$(window).on('resize', function () {
+	checkSlider();
+});
+
 "use strict";
 
 $('.deliver-modal-btn').on('click', function () {
@@ -87,6 +123,34 @@ $(document).on('keydown', function (e) {
 		$('.main-nav').removeClass('active');
 	}
 });
+
+"use strict";
+
+$(document).ready(function(){
+	// Add smooth scrolling to all links
+	$("a").on('click', function(event) {
+
+		// Make sure this.hash has a value before overriding default behavior
+		if (this.hash !== "") {
+			// Prevent default anchor click behavior
+			event.preventDefault();
+
+			// Store hash
+			var hash = this.hash;
+
+			// Using jQuery's animate() method to add smooth page scroll
+			// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+			$('html, body').animate({
+				scrollTop: $(hash).offset().top
+			}, 800, function(){
+
+				// Add hash (#) to URL when done scrolling (default click behavior)
+				window.location.hash = hash;
+			});
+		} // End if
+	});
+});
+
 
 "use strict";
 
