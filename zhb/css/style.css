@@ -316,6 +316,8 @@ a {
                   text-decoration-style: dashed; } }
 
 .main-info {
+  position: relative;
+  z-index: 1;
   max-width: 900px;
   width: 100%;
   margin: 0 auto;
@@ -532,6 +534,7 @@ a {
     line-height: 1.25em;
     font-weight: 500;
     color: #ffffff;
+    text-align: center;
     border: none;
     background-color: transparent;
     cursor: pointer; }
