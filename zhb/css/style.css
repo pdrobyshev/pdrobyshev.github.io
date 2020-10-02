@@ -48,7 +48,8 @@ html {
 body {
   position: relative;
   min-width: 320px;
-  height: 100%;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
   margin: 0;
   padding: 0;
   color: #252554;
@@ -680,7 +681,6 @@ a {
   display: -ms-flexbox;
   display: flex;
   height: 100vh;
-  min-height: -webkit-fill-available;
   background-color: #F3F5DD;
   background-image: url("../images/index/video-placeholder-mobile.jpg");
   background-position: center;
