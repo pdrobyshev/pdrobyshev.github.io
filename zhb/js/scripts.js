@@ -124,12 +124,6 @@ $(document).on('keydown', function (e) {
 	}
 });
 
-import smoothscroll from 'smoothscroll-polyfill';
-
-$(document).ready(function () {
-	smoothscroll.polyfill();
-});
-
 "use strict";
 
 $('.send-modal-btn').on('click', function () {
