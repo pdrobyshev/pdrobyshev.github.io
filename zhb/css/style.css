@@ -679,7 +679,8 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
+  min-height: calc(100vh - var(--browser-address-bar, 0px));
   background-color: #F3F5DD;
   background-image: url("../images/index/video-placeholder-mobile.jpg");
   background-position: center;
