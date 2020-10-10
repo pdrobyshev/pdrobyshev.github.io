@@ -3,12 +3,11 @@
 function showDescription() {
 	$('#parcel-description').show();
 	$('.field-text__textarea').focus();
-	$('.field-text__textarea').prop('required', true);
 }
 
 function hideDescription() {
 	$('#parcel-description').hide();
-	$('.field-text__textarea').prop('required', false);
+	$('.field-parcel_description_input').find('.help-block')[0].textContent = '';
 }
 
 $('.field-radio').on('click', '.field-radio__input', function () {

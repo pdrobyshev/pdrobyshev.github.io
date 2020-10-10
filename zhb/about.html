@@ -4,291 +4,282 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Сервис Zhiber</title>
-	<link rel="preload" href="fonts/montserrat700.woff2" as="font">
-	<link rel="preload" href="fonts/montserrat500.woff2" as="font">
+	<link rel="preload" href="/fonts/montserrat700.woff2" as="font">
+	<link rel="preload" href="/fonts/montserrat500.woff2" as="font">
 	<link rel="stylesheet" href="flickity/flickity.min.css">
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-	<div class="page-wrapper  page-wrapper--100vh">
-		<section class="faq-header  about-header">
-			<div class="container  container--first-frame">
-				<header class="page-header">
-					<button class="page-header__button" id="menu-open-btn">
-						<img class="page-header__button-icon" src="images/icons/burger-menu.svg" alt="menu" width="30" height="30">
-					</button>
+<div class="page-wrapper  page-wrapper--100vh">
+	<section class="faq-header">
+		<div class="container  container--first-frame">
+			<header class="page-header">
+				<button class="page-header__button" id="menu-open-btn">
+					<img class="page-header__button-icon" src="images/icons/burger-menu.svg" alt="menu" width="30" height="30">
+				</button>
 
-					<nav class="main-nav">
-						<div class="main-nav__inner-wrapper">
-							<button class="main-nav__button" id="menu-close-btn">
-								<img src="images/icons/close.svg" alt="close menu" width="30" height="30">
-							</button>
+				<nav class="main-nav">
+					<div class="main-nav__inner-wrapper">
+						<button class="main-nav__button" id="menu-close-btn">
+							<img src="images/icons/close.svg" alt="close menu" width="30" height="30">
+						</button>
 
-							<ul class="menu-list">
-								<li class="menu-list__item">
-									<a class="menu-list__link" href="#">О сервисе</a>
-								</li>
-								<li class="menu-list__item">
-									<a class="menu-list__link" href="#">Цены</a>
-								</li>
-								<li class="menu-list__item">
-									<a class="menu-list__link" href="#">Вопросы и ответы</a>
-								</li>
-								<li class="menu-list__item">
-									<a class="menu-list__link" href="#">Контакты</a>
-								</li>
-							</ul>
-
-							<a class="main-nav__link" href="#">Вход</a>
-						</div>
-					</nav>
-
-					<a class="logo" href="#">
-						<picture class="logo__picture">
-							<source media="(min-width: 1160px)" srcset="images/logo-header-desktop@1x.png 1x,
-																														images/logo-header-desktop@2x.png 2x">
-							<img class="logo__img" src="images/logo-header-mobile@1x.png"
-									 srcset="images/logo-header-mobile@2x.png 2x" alt="Zhiber" width="85" height="50">
-						</picture>
-					</a>
-
-					<ul class="language">
-						<li class="language__item  language__item--active">
-							<a class="language__link" href="#">RU</a>
-						</li>
-						<li class="language__item">
-							<a class="language__link" href="#">KZ</a>
-						</li>
-						<li class="language__item">
-							<a class="language__link" href="#">EN</a>
-						</li>
-					</ul>
-
-					<div class="call">
-						<img class="call__img" src="images/icons/call.svg" alt="call" width="60" height="60">
-
-						<div class="call__right">
-							<a class="call__number" href="tel:+77064074449">
-								+7 706
-								<span class="call__number-large">407-44-49</span>
-							</a>
-
-							<button class="call__text  call__modal-btn">Перезвоните мне</button>
-						</div>
-					</div>
-				</header>
-			</div>
-		</section>
-
-		<main class="page-main">
-			<div class="about-intro-wrapper">
-				<div class="about-how-works">
-					<button class="about-how-works__button">
-						<img class="about-how-works__icon" src="images/icons/play.svg" alt="play" width="68" height="68">
-						Как это работает?
-					</button>
-				</div>
-
-				<section class="about-intro">
-					<h2 class="about-intro__title">
-						Попутчик <span class="about-intro__pink-title">Zhiber</span>
-					</h2>
-
-					<p class="about-intro__intro-text">Это человек, который отправляется в другой город и может взять с собой
-						посылку</p>
-
-					<a class="about-intro__button" href="#">Стать попутчиком!</a>
-
-					<div class="about-intro__inner-wrapper">
-						<p class="about-intro__text">
-							Сервис дает уникальную возможность заработать на своей поездке и окупить дорожные расходы. Например, берешь
-							одну-две посылки — заработаешь на такси до аэропорта, начиная с третьей — частично окупаешь стоимость
-							билета.
-						</p>
-
-						<ul class="intro-slider" data-flickity='{
-						"cellAlign": "center",
-						"contain": true,
-						"pageDots": false,
-						"prevNextButtons": false,
-						"watchCSS": true
-					}'>
-							<li class="intro-slider__item  intro-slider__item--slide1">
-								<a class="intro-slider__link" href="#">
-									<img class="intro-slider__icon  intro-slider__icon--bill" src="images/icons/about/bill.svg" alt="bill"
-											 width="54" height="42">
-									<span class="intro-slider__text">Сколько я заработаю?</span>
-								</a>
+						<ul class="menu-list">
+							<li class="menu-list__item  menu-list__item--index">
+								<a class="menu-list__link" href="#">Главная страница</a>
 							</li>
-							<li class="intro-slider__item  intro-slider__item--slide2">
-								<a class="intro-slider__link" href="#">
-									<img class="intro-slider__icon  intro-slider__icon--officer" src="images/icons/about/officer.svg"
-											 alt="officer" width="27" height="69">
-									<span class="intro-slider__text">Какая ответственность?</span>
-								</a>
+							<li class="menu-list__item">
+								<a class="menu-list__link" href="#">О сервисе</a>
 							</li>
-							<li class="intro-slider__item  intro-slider__item--slide3">
-								<a class="intro-slider__link" href="#">
-									<img class="intro-slider__icon  intro-slider__icon--shield" src="images/icons/about/shield.svg"
-											 alt="shield"
-											 width="49" height="60">
-									<span class="intro-slider__text">А это безопасно?</span>
-								</a>
+							<li class="menu-list__item">
+								<a class="menu-list__link" href="#">Цены</a>
 							</li>
-						</ul>
-					</div>
-				</section>
-			</div>
-
-			<section class="about-section  about-section--section1">
-				<div class="bg-clip  bg-clip--section1">
-					<div class="about  about--section1">
-						<h2 class="about__title  about__title--section1">
-							Почему быть попутчиком <span class="about__pink-title">выгодно?</span>
-						</h2>
-
-						<p class="about__text  about__text--section1">
-							Так как вам все равно по пути — есть возможность заработать на поездке и сделать доброе дело. Сервис
-							не диктует стоимость доставки, но может подсказать рыночную стоимость по вашему направлению. В зависимости
-							от условий (откуда, куда доставить) стоимость может отличаться от рыночной.
-						</p>
-
-						<div class="about-links">
-							<a class="about-links__button" href="#">Стать попутчиком!</a>
-							<a class="about-links__link" href="#">Сколько я заработаю?</a>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section class="about-section  about-section--section2">
-				<div class="bg-clip">
-					<div class="about-wrapper">
-						<div class="about  about--section2">
-							<h2 class="about__title">Условия</h2>
-
-							<div class="about-text-wrapper">
-								<p class="about__text  about__text--section2">
-									Посылки бывают разные, в зависимости от ваших условий. Все нюансы своей поездки, вы можете <span
-									class="about__pink-text">написать менеджеру</span>. Например, если у вас только ручная кладь, то вы не
-									возьмете посылку с жидкими средствами и т. д. Все условия, а именно место передачи, получения <span
-									class="about__bold-text">обсуждаются с отправителем</span>.
-								</p>
-								<p class="about__text  about__text--section2">
-									Как правило, отправитель (или получатель) и попутчик <span
-									class="about__bold-text">встречаются в городе</span>. Мы настоятельно рекомендуем <span
-									class="about__bold-text">проверять</span> перевозимые посылки, во избежании неприятных ситуаций.
-								</p>
-							</div>
-
-							<div class="about-links">
-								<a class="about-links__button" href="#">Стать попутчиком!</a>
-								<a class="about-links__link" href="#">Вопросы и ответы</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section class="about-section">
-				<div class="bg-clip  bg-clip--section3">
-					<div class="about  about--section3">
-						<h2 class="about__title  about__title--section3">
-							Как это <span class="about__pink-title">происходит?</span>
-						</h2>
-
-						<ul class="how-works-slider  about__how-works-slider"
-								data-flickity='{
-									"cellAlign": "center",
-									"contain": true,
-									"pageDots": false,
-									"prevNextButtons": false,
-									"watchCSS": true
-								}'>
-							<li class="how-works-slider__item">
-								<img class="how-works-slider__icon" src="images/icons/about/step1.svg" alt="step1" width="60" height="64">
-								<p class="how-works-slider__text">оставляете заявку на доставку с указанием направления, даты
-									перелета/поездки и контактные данные</p>
+							<li class="menu-list__item">
+								<a class="menu-list__link" href="#">Вопросы и ответы</a>
 							</li>
-							<li class="how-works-slider__item">
-								<img class="how-works-slider__icon" src="images/icons/about/step2.svg" alt="step2" width="60" height="64">
-								<p class="how-works-slider__text">с вами связывается менеджер и находит нужное отправление</p>
+							<li class="menu-list__item">
+								<a class="menu-list__link" href="#">Попутчику</a>
 							</li>
-							<li class="how-works-slider__item">
-								<img class="how-works-slider__icon" src="images/icons/about/step3.svg" alt="step3" width="60" height="64">
-								<p class="how-works-slider__text">свяжитесь, доставьте посылку и заработайте!</p>
-							</li>
-							<li class="how-works-slider__item">
-								<img class="how-works-slider__icon" src="images/icons/about/step4.svg" alt="step4" width="60" height="64">
-								<p class="how-works-slider__text">связываетесь и договариваетесь о деталях</p>
-							</li>
-							<li class="how-works-slider__item">
-								<img class="how-works-slider__icon" src="images/icons/about/step5.svg" alt="step5" width="60" height="64">
-								<p class="how-works-slider__text">доставляете</p>
+							<li class="menu-list__item">
+								<a class="menu-list__link" href="#">Контакты</a>
 							</li>
 						</ul>
 
-						<div class="about-links">
-							<a class="about-links__button" href="#">Стать попутчиком!</a>
-							<a class="about-links__link" href="#">Сколько я заработаю?</a>
-						</div>
+						<a class="main-nav__link" href="#">Вход</a>
 					</div>
+				</nav>
 
-					<footer class="page-footer  page-footer--about  page-wrapper__page-footer">
-						<div class="container  container--footer">
-							<div class="footer-links">
-								<a class="footer-links__logo" href="#">
-									<img class="slider__img" src="images/logo-footer@1x.png"
-											 srcset="images/logo-footer@2x.png 2x" alt="zhiber" width="130" height="16">
-								</a>
+				<a class="logo" href="#">
+					<picture class="logo__picture">
+						<source media="(min-width: 1160px)" srcset="images/logo-desktop@1x.png 1x,
+																												images/logo-desktop@2x.png 2x">
+						<img class="logo__img" src="images/logo-header-mobile@1x.png"
+								 srcset="images/logo-header-mobile@2x.png 2x" alt="Zhiber" width="85" height="50">
+					</picture>
+				</a>
 
-								<a class="footer-links__offer" href="#">Публичная оферта</a>
-							</div>
+				<ul class="language">
+					<li class="language__item  language__item--active">
+						<a class="language__link" href="#">RU</a>
+					</li>
+					<li class="language__item">
+						<a class="language__link" href="#">KZ</a>
+					</li>
+					<li class="language__item">
+						<a class="language__link" href="#">EN</a>
+					</li>
+				</ul>
 
-							<span class="page-footer__copyright">© Zhiber, 2020</span>
-						</div>
-					</footer>
+				<div class="call">
+					<img class="call__img" src="images/icons/call.svg" alt="call" width="60" height="60">
+
+					<div class="call__right">
+						<a class="call__number" href="tel:+77064074449">
+							+7 706
+							<span class="call__number-large">407-44-49</span>
+						</a>
+
+						<button class="call__text  call__modal-btn">Перезвоните мне</button>
+					</div>
 				</div>
-			</section>
-		</main>
-	</div>
-
-	<section class="modal  modal--call">
-		<form class="modal-form  modal-form--call" action="/">
-			<button class="modal-form__close">
-				<img class="modal-form__close-icon" src="images/icons/close.svg" alt="close" width="30" height="30">
-			</button>
-
-			<h2 class="modal-form__title">Закажите обратный звонок</h2>
-
-			<p class="modal-form__text">Укажите свой номер телефона и мы перезвоним вам в ближайшее время.</p>
-
-			<div class="modal-form__flex-wrapper">
-				<div class="field-text  field-text--bordered  field-text--phone">
-					<input class="field-text__input  field-text__input--bordered" type="text" inputmode="numeric" name="phone"
-								 placeholder="Ваш номер телефона" required>
-				</div>
-
-				<button class="modal-form__button  button">Перезвоните мне</button>
-			</div>
-		</form>
-	</section>
-
-	<section class="modal  modal--video">
-		<div class="yt-video">
-			<button class="modal-form__close  yt-video__close">
-				<img class="modal-form__close-icon" src="images/icons/close.svg" alt="close" width="30" height="30">
-			</button>
-
-			<iframe class="yt-video__frame" width="560" height="315" src="https://www.youtube.com/watch?v=_AhqNJWrC7M"
-							frameborder="0"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen></iframe>
+			</header>
 		</div>
 	</section>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="flickity/flickity.pkgd.min.js"></script>
-	<script src="js/scripts.min.js"></script>
+	<main class="page-main" id="page-main">
+		<article class="about-page">
+			<section class="about-page-section">
+				<h1 class="about-page__intro-title">Информация о сервисе</h1>
+				<p class="about-page__intro">
+					Zhiber соединяет человека, которому необходимо срочно отправить документы или посылку, с тем, кому по пути
+				</p>
+
+				<ul class="info-slider  about-page__info-slider" data-flickity='{
+					"cellAlign": "left",
+					"contain": true,
+					"pageDots": false,
+					"prevNextButtons": false,
+					"watchCSS": true
+				}'>
+					<li class="info-slider__item">
+						<picture class="info-slider__picture">
+							<img class="info-slider__img  info-slider__img--info1" src="images/index/feature1@1x.png"
+									 srcset="images/index/feature1@2x.png 2x" alt="feature1" width="140" height="156">
+						</picture>
+						<p class="info-slider__title">1,5 дня</p>
+						<p class="info-slider__text">Средняя экономия времени при доставке</p>
+					</li>
+					<li class="info-slider__item">
+						<picture class="info-slider__picture">
+							<img class="info-slider__img  info-slider__img--info2" src="images/index/feature2@1x.png"
+									 srcset="images/index/feature2@2x.png 2x" alt="feature2" width="165" height="158">
+						</picture>
+						<p class="info-slider__title">Более 10 000</p>
+						<p class="info-slider__text">Количество сделанных через Zhiber отправлений</p>
+					</li>
+					<li class="info-slider__item">
+						<picture class="info-slider__picture">
+							<img class="info-slider__img  info-slider__img--info3" src="images/index/feature3@1x.png"
+									 srcset="images/index/feature3@2x.png 2x" alt="feature3" width="147" height="162">
+						</picture>
+						<p class="info-slider__title">до 100 %</p>
+						<p class="info-slider__text">Компенсация расходов на поездку</p>
+					</li>
+					<li class="info-slider__item">
+						<picture class="info-slider__picture">
+							<img class="info-slider__img  info-slider__img--info4" src="images/index/feature4@1x.png"
+									 srcset="images/index/feature4@2x.png 2x" alt="feature4" width="177" height="145">
+						</picture>
+						<p class="info-slider__title">20 000 тенге</p>
+						<p class="info-slider__text">Средний заработок попутчика</p>
+					</li>
+				</ul>
+			</section>
+
+			<section class="about-page-section">
+				<h2 class="about-page__title">5 золотых правил Zhiber</h2>
+				<p class="about-page__text">
+					Для нас важно доверие наших пользователей и безопасность доставки. Поэтому мы разработали список обязательных к соблюдению правил. Соблюдение всех правил поможет вам комфортно отправить или доставить посылку.
+				</p>
+
+				<ul class="about-page-slider"  data-flickity='{
+					"cellAlign": "left",
+					"contain": true,
+					"pageDots": false,
+					"prevNextButtons": false,
+					"watchCSS": true
+				}'>
+					<li class="about-page-slider__item  about-page-slider__item--n1">
+						<div class="about-page-slider__content">Уважайте друг друга</div>
+					</li>
+					<li class="about-page-slider__item  about-page-slider__item--n2">
+						<div class="about-page-slider__content">Проверяйте перевозимые предметы</div>
+					</li>
+					<li class="about-page-slider__item  about-page-slider__item--n3">
+						<div class="about-page-slider__content">Обсуждайте все детали</div>
+					</li>
+					<li class="about-page-slider__item  about-page-slider__item--n4">
+						<div class="about-page-slider__content">Отвечайте своевременно</div>
+					</li>
+					<li class="about-page-slider__item  about-page-slider__item--n5">
+						<div class="about-page-slider__content">Выполняйте договоренности</div>
+					</li>
+				</ul>
+			</section>
+
+			<section class="about-page-section">
+				<h2 class="about-page__title">Способ оплаты</h2>
+				<p class="about-page__text  about-page__text--no-mb">
+					В данный момент сервис абсолютно бесплатный. Мы не диктуем стоимость доставки. Вознаграждение за доставку оговаривается индивидуально с заказчиком.
+				</p>
+			</section>
+
+			<section class="about-page-section">
+				<h2 class="about-page__title">Что можно отправлять?</h2>
+				<p class="about-page__text">
+					Все, что угодно и не запрещено законом
+				</p>
+
+				<ul class="about-page-slider"  data-flickity='{
+					"cellAlign": "left",
+					"contain": true,
+					"pageDots": false,
+					"prevNextButtons": false,
+					"watchCSS": true
+				}'>
+					<li class="about-page-slider__item  about-page-slider__item--n6">
+						<div class="about-page-slider__content  about-page-slider__content--column">
+							<img class="about-page-slider__icon" src="images/about-page/document.svg" alt="docs" width="37" height="42">
+							<span class="about-page-slider__text">Документы</span>
+						</div>
+					</li>
+					<li class="about-page-slider__item  about-page-slider__item--n7">
+						<div class="about-page-slider__content  about-page-slider__content--column">
+							<img class="about-page-slider__icon" src="images/about-page/clothes.svg" alt="clothes" width="43" height="43">
+							<span class="about-page-slider__text">Одежду</span>
+						</div>
+					</li>
+					<li class="about-page-slider__item  about-page-slider__item--n8">
+						<div class="about-page-slider__content  about-page-slider__content--column">
+							<img class="about-page-slider__icon" src="images/about-page/food.svg" alt="food" width="38" height="40">
+							<span class="about-page-slider__text">Еду</span>
+						</div>
+					</li>
+					<li class="about-page-slider__item  about-page-slider__item--n9">
+						<div class="about-page-slider__content  about-page-slider__content--column">
+							<img class="about-page-slider__icon" src="images/about-page/meds.svg" alt="meds" width="34" height="56">
+							<span class="about-page-slider__text">Лекарства</span>
+						</div>
+					</li>
+					<li class="about-page-slider__item  about-page-slider__item--n10">
+						<div class="about-page-slider__content  about-page-slider__content--column">
+							<img class="about-page-slider__icon" src="images/about-page/parcel.svg" alt="parcels" width="42" height="42">
+							<span class="about-page-slider__text">Любые посылки до 5 кг</span>
+						</div>
+					</li>
+				</ul>
+			</section>
+
+			<section class="about-page-section">
+				<h2 class="about-page__title">Недалёкое будущее</h2>
+				<p class="about-page__text">
+					Мы стараемся улучшить наш сервис. В скором времени появятся такие возможности, как:
+				</p>
+
+				<ul class="about-text-list">
+					<li class="about-text-list__item">Онлайн-идентификация пользователей</li>
+					<li class="about-text-list__item">Безопасный платеж</li>
+					<li class="about-text-list__item">Чат-платформа</li>
+					<li class="about-text-list__item">Страхование посылки</li>
+				</ul>
+			</section>
+		</article>
+	</main>
+
+	<div class="to-top">
+		<button class="to-top__button">
+			<img class="to-top__icon" src="images/icons/arrow-to-top.svg" alt="scroll-top" width="30" height="30">
+		</button>
+	</div>
+
+	<footer class="page-footer  page-wrapper__page-footer">
+		<div class="container  container--footer">
+			<div class="footer-links">
+				<a class="footer-links__logo" href="#">
+					<img class="footer-links__img" src="images/logo-footer@1x.png"
+							 srcset="images/logo-footer@2x.png 2x" alt="zhiber" width="130" height="16">
+				</a>
+
+				<a class="footer-links__offer" href="#">Публичная оферта</a>
+			</div>
+
+			<span class="page-footer__copyright">© Zhiber, 2020</span>
+		</div>
+	</footer>
+</div>
+
+<section class="modal  modal--call">
+	<form class="modal-form  modal-form--call" action="/">
+		<button class="modal-form__close">
+			<img class="modal-form__close-icon" src="images/icons/close.svg" alt="close" width="30" height="30">
+		</button>
+
+		<h2 class="modal-form__title">Закажите обратный звонок</h2>
+
+		<p class="modal-form__text">Укажите свой номер телефона, и мы перезвоним вам в ближайшее время.</p>
+
+		<div class="modal-form__flex-wrapper">
+			<div class="field-text  field-text--bordered  field-text--phone">
+				<input class="field-text__input  field-text__input--bordered" type="text" inputmode="numeric" name="phone" placeholder="Ваш номер телефона" required>
+			</div>
+
+			<button class="modal-form__button  button">Перезвоните мне</button>
+		</div>
+	</form>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="flickity/flickity.pkgd.min.js"></script>
+<script src="js/scripts.min.js"></script>
 </body>
 </html>
