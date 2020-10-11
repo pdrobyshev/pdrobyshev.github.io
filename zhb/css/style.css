@@ -519,7 +519,7 @@ a {
       .call-buttons::before {
         display: none; } }
   .call-buttons__scroll {
-    position: fixed;
+    position: absolute;
     bottom: 38px;
     left: 50%;
     -webkit-transform: translateX(-50%);
@@ -533,6 +533,7 @@ a {
     cursor: pointer; }
     @media (min-width: 1160px) {
       .call-buttons__scroll {
+        position: fixed;
         bottom: -21px; } }
   .call-buttons__scroll-icon {
     display: block;
