@@ -3011,6 +3011,8 @@ a {
   @media (min-width: 1360px) {
     .to-top {
       padding: 0 60px; } }
+  .to-top--mt-a {
+    margin-top: auto; }
   .to-top__button {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3049,7 +3051,8 @@ a {
   margin: 8px 0;
   font-size: 13px;
   font-weight: 600;
-  text-align: center; }
+  text-align: center;
+  color: #a94442; }
 
 .form-group {
   margin: 0; }
