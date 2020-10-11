@@ -3002,6 +3002,8 @@ a {
   margin-top: auto; }
 
 .to-top {
+  position: relative;
+  z-index: 1;
   max-width: 1360px;
   width: 100%;
   margin: 0 auto;
