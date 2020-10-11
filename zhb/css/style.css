@@ -452,7 +452,7 @@ a {
   @media (min-width: 1620px) {
     .how-works {
       width: 323px;
-      height: 557px; } }
+      height: 57vh; } }
   .how-works__button {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -673,6 +673,13 @@ a {
       display: block;
       width: 100%;
       height: auto; } }
+  @media (min-width: 1160px) {
+    .frame-video {
+      height: 100%;
+      -o-object-fit: cover;
+         object-fit: cover;
+      -o-object-position: 20%;
+         object-position: 20%; } }
 
 .faq-header {
   position: relative;
@@ -719,10 +726,7 @@ a {
     margin-bottom: 32px; }
     @media (min-width: 1160px) {
       .first-frame__page-header {
-        margin-bottom: 220px; } }
-    @media (min-width: 1620px) {
-      .first-frame__page-header {
-        margin-bottom: 416px; } }
+        margin-bottom: 39vh; } }
   .first-frame--auto-height {
     min-height: 810px;
     height: auto; }
@@ -773,13 +777,36 @@ a {
     font-weight: 700;
     text-align: center;
     background: rgba(0, 0, 0, 0.05);
-    border-radius: 20px; }
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; }
     .about-page-slider__content--column {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column;
       padding: 20px 10px; }
+    .about-page-slider__content--n1 {
+      background-image: url("../images/about-page/rules-slider-n1.jpg"); }
+    .about-page-slider__content--n2 {
+      background-image: url("../images/about-page/rules-slider-n2.jpg"); }
+    .about-page-slider__content--n3 {
+      background-image: url("../images/about-page/rules-slider-n3.jpg"); }
+    .about-page-slider__content--n4 {
+      background-image: url("../images/about-page/rules-slider-n4.jpg"); }
+    .about-page-slider__content--n5 {
+      background-image: url("../images/about-page/rules-slider-n5.jpg"); }
+    .about-page-slider__content--n6 {
+      background-image: url("../images/about-page/goods-slider-n1.jpg"); }
+    .about-page-slider__content--n7 {
+      background-image: url("../images/about-page/goods-slider-n2.jpg"); }
+    .about-page-slider__content--n8 {
+      background-image: url("../images/about-page/goods-slider-n3.jpg"); }
+    .about-page-slider__content--n9 {
+      background-image: url("../images/about-page/goods-slider-n4.jpg"); }
+    .about-page-slider__content--n10 {
+      background-image: url("../images/about-page/goods-slider-n5.jpg"); }
   .about-page-slider__icon {
     display: block;
     margin-top: auto; }
