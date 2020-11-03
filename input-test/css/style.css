@@ -103,7 +103,9 @@ body {
   border: none;
   background-color: #5BA550;
   border-radius: 54px;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0; }
   @media (min-width: 768px) {
     .payment-form__button {
       padding: 22px; } }
