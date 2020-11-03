@@ -100,12 +100,12 @@ body {
   font-weight: 500;
   letter-spacing: 0.16px;
   color: #ffffff;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
   border: none;
   background-color: #5BA550;
   border-radius: 54px;
-  cursor: pointer;
-  -webkit-appearance: none;
-  -webkit-border-radius: 0; }
+  cursor: pointer; }
   @media (min-width: 768px) {
     .payment-form__button {
       padding: 22px; } }
