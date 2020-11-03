@@ -69,26 +69,26 @@
         // });
 
         $('#amount-input').on('keyup', function (event) {
-            if (event.which >= 48 || event.which <= 57) {
-                // 48-57 for 0-9 numbers
-                if (event.which !== 8) {
-                    // 8 for Backspace
-                    if ($('#amount-input').val().length === 5) {
-                        let splitAmount = $('#amount-input').val().split('');
-                        let filteredAmount = splitAmount.filter(value => value !== '.');
-                        filteredAmount.splice(2, 0, '.');
-                        let finalAmount = filteredAmount.join('');
-                        $('#amount-input').val(finalAmount);
-                    } else {
-                        let splitAmount = $('#amount-input').val().split('');
-                        let filteredAmount = splitAmount.filter(value => value !== '.');
-                        filteredAmount.splice(1, 0, '.');
-                        let finalAmount = filteredAmount.join('');
-                        $('#amount-input').val(finalAmount);
-                    }
-                }
-            } else if (event.which !== 8) {
+            if (event.which !== 8 && event.which < 48 || event.which > 57) {
+                console.log('1st if');
                 $(this).val($(this).val().replace(/[^0-9]/g, ''));
+            }
+
+            if (event.which >= 48 && event.which <= 57) {
+                console.log('2nd if');
+                if ($('#amount-input').val().length === 5) {
+                    let splitAmount = $('#amount-input').val().split('');
+                    let filteredAmount = splitAmount.filter(value => value !== '.');
+                    filteredAmount.splice(2, 0, '.');
+                    let finalAmount = filteredAmount.join('');
+                    $('#amount-input').val(finalAmount);
+                } else {
+                    let splitAmount = $('#amount-input').val().split('');
+                    let filteredAmount = splitAmount.filter(value => value !== '.');
+                    filteredAmount.splice(1, 0, '.');
+                    let finalAmount = filteredAmount.join('');
+                    $('#amount-input').val(finalAmount);
+                }
             }
         });
 
